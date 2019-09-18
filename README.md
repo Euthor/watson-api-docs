@@ -28,4 +28,4 @@ The docs should be generated in `/docs` directory.
 
 ### Authors
 
-- Nicholas Kyriakides, @nicholaswmin
+- [Nicholas Kyriakides, @nicholaswmin](https://github.com/nicholaswmin)
