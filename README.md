@@ -33,6 +33,6 @@ The docs should be generated in `/docs` directory.
 Deploying to `master` branch automatically triggers a Github Pages build which
 publishes the docs at https://euthor.github.io/watson-api-docs/.
 
-### Authors
+## Authors
 
 - [Nicholas Kyriakides, @nicholaswmin](https://github.com/nicholaswmin)
