@@ -10,7 +10,7 @@ authentication: You authenticate each request by passing an x-access-token
   for more details on how to obtain a valid access token. You are expected
   to cycle the access token, by logging-in again, every now and then
   (ideally every other day) to ensure that a compromised token is not
-  indefinetely valid.
+  indefinitely valid.
 errors:
   http_errors:
   - code: 200
