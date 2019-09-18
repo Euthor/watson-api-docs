@@ -1,5 +1,5 @@
 ---
-name: EUComply's REST API
+name: EUComply's REST API Docs
 url: http://localhost:5003
 version: '1.0'
 copyright: '2019'
@@ -17,8 +17,8 @@ errors:
     description: Success. There is no response data.
   - code: 400
     text: Bad Request
-    description: The request was invalid (possibly because of validation errors) or
-      cannot be otherwise served.
+    description: The request was invalid, usually because the request contains invalid request body data.
+     If this is the case, the response body will contain a message indicating the invalid fields and their issues.
   - code: 401
     text: Unauthorized Request
     description: The x-access-token is not valid or the username/password do not match when logging-in.
@@ -33,7 +33,7 @@ resources:
   login:
   - action: POST
     uri: "/api/login"
-    description: Login using username/password and receive an access token to be used as an x-access-token
+    description: Login using username & password and receive an access token to be used as an x-access-token
       header in subsequent requests. Ensure the requested user has the appropriate
       priviledges for subsequent requests.
     headers:

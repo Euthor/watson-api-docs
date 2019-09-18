@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>/api/customer?idInternalCustomer=:idInternalCustomer</title>
+    <title>/api/customer/risk-trails?idInternalCustomer=:idInternalCustomer&limits=:limits</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link type="text/css" rel="stylesheet" href="assets/css/main.css" />
   </head>
@@ -10,7 +10,7 @@
 
       <div id="header-outer">
         <div id="header">
-          <a href="/" id="logo" title="Home">EUComply's REST API</a>
+          <a href="/" id="logo" title="Home">EUComply's REST API Docs</a>
 
           <ul id="title-nav">
             <li><a href="overview.html">Overview</a></li>
@@ -23,13 +23,13 @@
 
       <div id="content-outer">
         <div class="page-header">
-          <h1>PUT /api/customer?idInternalCustomer=:idInternalCustomer</h1>
+          <h1>GET /api/customer/risk-trails?idInternalCustomer=:idInternalCustomer&limits=:limits</h1>
         </div>
 
         <div id="content-main">
           <div class="field field-el">
             <h2>Description</h2>
-            <p>Update an existing Customer. Responds with the unique identifiers of the created Risk and Audit Trails. You can just send the changed fields here. There is no need to send unchanged main/details fields.</p>
+            <p>Read the Risk Trails for a given Customer. Note that the last Risk Trail also contains the current approval status for the Customer.</p>
           </div>
 
 	  
@@ -63,36 +63,22 @@
                 </div>
               
                 <div class="parameter">
-                  <span class="param">main
-                    <span>required, type: object</span>
+                  <span class="param">limits
+                    <span>required, type: integer</span>
                   </span>
-                  <p>Declare in request body. The main details of a Customer. See sample request.</p>
-                </div>
-              
-                <div class="parameter">
-                  <span class="param">details
-                    <span>required, type: object</span>
-                  </span>
-                  <p>Declare in request body. The details of the Customer. See sample request.</p>
+                  <p>Declare in query string. How many Risk Trails to fetch. Note that Risk Trails are fetched in descending creation order so limits=1 will fetch the last Risk Trail. If the last Risk Trail has idApprovalStatus=null then the Customer Approval Status is 'Pending'.</p>
                 </div>
               
             </div>
           </div>
 
           
-            <div class="group-example-request">
-              <h2>Example Request</h2>
-              <div class="content">
-                <pre class="prettyprint">{<br/>&nbsp;&nbsp;&nbsp;&nbsp;"details": {<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"dateBirth": "1973-04-15",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"firstName": "Johnnie",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"profession": "Programmer"<br/>&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;"main": {<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"idCustomerStatus": 2,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"relationshipEndDate": "2012-12-24"<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>
-              </div>
-            </div>
-          
 
           
             <div class="group-example-request">
               <h2>Example Response</h2>
               <div class="content">
-                <pre class="prettyprint">{<br/>&nbsp;&nbsp;&nbsp;&nbsp;"idAuditTrail": 2,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"idRiskTrail": 2<br/>}</pre>
+                <pre class="prettyprint">{<br/>&nbsp;&nbsp;&nbsp;&nbsp;"id": 1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"idRiskTrail": 1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"reviewed": false,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"reviewedDate": null,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"comments": null,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"idCustomer": 1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"idRiskType": null,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"idUserReviewer": null,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"userReviewerName": null,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"idApprovalStatus": null,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"approvalStatusName": null<br/>}</pre>
               </div>
             </div>
           
@@ -109,7 +95,7 @@
                 </tr>
                 <tr>
                   <td>HTTP Method</td>
-                  <td>PUT</td>
+                  <td>GET</td>
                 </tr>
                 <tr>
                   <td>Login Required</td>
@@ -126,7 +112,7 @@
       </div>
 
       <div id="footer-outer">
-        <div id="footer">EUComply's REST API &copy; 2013</div>
+        <div id="footer">EUComply's REST API Docs &copy; 2013</div>
       </div>
 
     </div>

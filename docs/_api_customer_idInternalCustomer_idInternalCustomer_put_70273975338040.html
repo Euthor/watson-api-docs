@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>/api/customer/risk-trails/:idRiskTrail</title>
+    <title>/api/customer?idInternalCustomer=:idInternalCustomer</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link type="text/css" rel="stylesheet" href="assets/css/main.css" />
   </head>
@@ -10,7 +10,7 @@
 
       <div id="header-outer">
         <div id="header">
-          <a href="/" id="logo" title="Home">EUComply's REST API</a>
+          <a href="/" id="logo" title="Home">EUComply's REST API Docs</a>
 
           <ul id="title-nav">
             <li><a href="overview.html">Overview</a></li>
@@ -23,13 +23,13 @@
 
       <div id="content-outer">
         <div class="page-header">
-          <h1>PUT /api/customer/risk-trails/:idRiskTrail</h1>
+          <h1>PUT /api/customer?idInternalCustomer=:idInternalCustomer</h1>
         </div>
 
         <div id="content-main">
           <div class="field field-el">
             <h2>Description</h2>
-            <p>Update a Risk Trail. Used to approve a Risk Trail.</p>
+            <p>Update an existing Customer. Responds with the unique identifiers of the created Risk and Audit Trails. You can just send the changed fields here. There is no need to send unchanged main/details fields.</p>
           </div>
 
 	  
@@ -56,38 +56,45 @@
             <div class="odd">
               
                 <div class="parameter">
-                  <span class="param">idRiskTrail
-                    <span>required, type: integer</span>
-                  </span>
-                  <p>Declare in URL path. The unique numeric identifier of the Risk Trail.</p>
-                </div>
-              
-                <div class="parameter">
-                  <span class="param">idApprovalStatus
-                    <span>required, type: integer</span>
-                  </span>
-                  <p>Declare in request body. 1 = Approved, 2 = Rejected.</p>
-                </div>
-              
-                <div class="parameter">
-                  <span class="param">idRiskType
-                    <span>required, type: integer</span>
-                  </span>
-                  <p>Declare in request body. 1 = Low, 2 = Medium, 3 = High, 4 = Extremely High.</p>
-                </div>
-              
-                <div class="parameter">
-                  <span class="param">comments
+                  <span class="param">idInternalCustomer
                     <span>required, type: string</span>
                   </span>
-                  <p>Some comments about this approval</p>
+                  <p>Declare in query string. The Internal Customer Number of the requested Customer.</p>
+                </div>
+              
+                <div class="parameter">
+                  <span class="param">main
+                    <span>required, type: object</span>
+                  </span>
+                  <p>Declare in request body. The main details of a Customer. See sample request.</p>
+                </div>
+              
+                <div class="parameter">
+                  <span class="param">details
+                    <span>required, type: object</span>
+                  </span>
+                  <p>Declare in request body. The details of the Customer. See sample request.</p>
                 </div>
               
             </div>
           </div>
 
           
+            <div class="group-example-request">
+              <h2>Example Request</h2>
+              <div class="content">
+                <pre class="prettyprint">{<br/>&nbsp;&nbsp;&nbsp;&nbsp;"details": {<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"dateBirth": "1973-04-15",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"firstName": "Johnnie",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"profession": "Programmer"<br/>&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;"main": {<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"idCustomerStatus": 2,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"relationshipEndDate": "2012-12-24"<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>
+              </div>
+            </div>
+          
 
+          
+            <div class="group-example-request">
+              <h2>Example Response</h2>
+              <div class="content">
+                <pre class="prettyprint">{<br/>&nbsp;&nbsp;&nbsp;&nbsp;"idAuditTrail": 2,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"idRiskTrail": 2<br/>}</pre>
+              </div>
+            </div>
           
         </div>
 
@@ -119,7 +126,7 @@
       </div>
 
       <div id="footer-outer">
-        <div id="footer">EUComply's REST API &copy; 2013</div>
+        <div id="footer">EUComply's REST API Docs &copy; 2013</div>
       </div>
 
     </div>

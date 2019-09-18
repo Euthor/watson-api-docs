@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>/api/login</title>
+    <title>/api/customer?idInternalCustomer=:idInternalCustomer</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link type="text/css" rel="stylesheet" href="assets/css/main.css" />
   </head>
@@ -10,7 +10,7 @@
 
       <div id="header-outer">
         <div id="header">
-          <a href="/" id="logo" title="Home">EUComply's REST API</a>
+          <a href="/" id="logo" title="Home">EUComply's REST API Docs</a>
 
           <ul id="title-nav">
             <li><a href="overview.html">Overview</a></li>
@@ -23,27 +23,15 @@
 
       <div id="content-outer">
         <div class="page-header">
-          <h1>POST /api/login</h1>
+          <h1>DELETE /api/customer?idInternalCustomer=:idInternalCustomer</h1>
         </div>
 
         <div id="content-main">
           <div class="field field-el">
             <h2>Description</h2>
-            <p>Login using username/password and receive an access token to be used as an x-access-token header in subsequent requests. Ensure the requested user has the appropriate priviledges for subsequent requests.</p>
+            <p>Delete a Customer from the system.</p>
           </div>
 
-	  
-	  <div class="field">
-            <h2>Headers</h2>
-            <div class="odd">
-              
-                <div class="parameter">
-                  <span class="param">Content-Type</span>
-                  <p>application/json</p>
-                </div>
-              
-            </div>
-          </div>
 	  
 
           <div class="field">
@@ -51,38 +39,17 @@
             <div class="odd">
               
                 <div class="parameter">
-                  <span class="param">username
+                  <span class="param">idInternalCustomer
                     <span>required, type: string</span>
                   </span>
-                  <p>The username of the user.</p>
-                </div>
-              
-                <div class="parameter">
-                  <span class="param">password
-                    <span>required, type: string</span>
-                  </span>
-                  <p>The password of the user.</p>
+                  <p>Declare in query string. The Internal Customer Number of the requested Customer.</p>
                 </div>
               
             </div>
           </div>
 
           
-            <div class="group-example-request">
-              <h2>Example Request</h2>
-              <div class="content">
-                <pre class="prettyprint">{<br/>&nbsp;&nbsp;&nbsp;&nbsp;"username": "Administrator",<br/>&nbsp;&nbsp;&nbsp;&nbsp;"password": "sample-password-Sx123"<br/>}</pre>
-              </div>
-            </div>
-          
 
-          
-            <div class="group-example-request">
-              <h2>Example Response</h2>
-              <div class="content">
-                <pre class="prettyprint">{<br/>&nbsp;&nbsp;&nbsp;&nbsp;"success": true,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"token": "eyJhbGciOiJIUzI1NiJ9.YWRtaW5pc3RyYXRvciQyYSQwNCQycXlNL05hZDYudkN1cXpsRjNibkguRnZTZS9MRHNRRmFuNUpwNzd5cGo3QmsuM3pqUURmaQ.M1qhGoR-LBtJI4WnSjxLLy-OzofSCqmFhcM9QdTdM7Y"<br/>}</pre>
-              </div>
-            </div>
           
         </div>
 
@@ -97,7 +64,7 @@
                 </tr>
                 <tr>
                   <td>HTTP Method</td>
-                  <td>POST</td>
+                  <td>DELETE</td>
                 </tr>
                 <tr>
                   <td>Login Required</td>
@@ -114,7 +81,7 @@
       </div>
 
       <div id="footer-outer">
-        <div id="footer">EUComply's REST API &copy; 2013</div>
+        <div id="footer">EUComply's REST API Docs &copy; 2013</div>
       </div>
 
     </div>
