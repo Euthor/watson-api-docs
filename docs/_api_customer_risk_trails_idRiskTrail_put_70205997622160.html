@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>/api/customer?idInternalCustomer=:idInternalCustomer</title>
+    <title>/api/customer/risk-trails/:idRiskTrail</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link type="text/css" rel="stylesheet" href="assets/css/main.css" />
   </head>
@@ -23,15 +23,32 @@
 
       <div id="content-outer">
         <div class="page-header">
-          <h1>DELETE /api/customer?idInternalCustomer=:idInternalCustomer</h1>
+          <h1>PUT /api/customer/risk-trails/:idRiskTrail</h1>
         </div>
 
         <div id="content-main">
           <div class="field field-el">
             <h2>Description</h2>
-            <p>Remove a Customer from the system.</p>
+            <p>Update a Risk Trail. Used to approve a Risk Trail.</p>
           </div>
 
+	  
+	  <div class="field">
+            <h2>Headers</h2>
+            <div class="odd">
+              
+                <div class="parameter">
+                  <span class="param">Content-Type</span>
+                  <p>application/json</p>
+                </div>
+              
+                <div class="parameter">
+                  <span class="param">x-access-token</span>
+                  <p>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</p>
+                </div>
+              
+            </div>
+          </div>
 	  
 
           <div class="field">
@@ -39,10 +56,31 @@
             <div class="odd">
               
                 <div class="parameter">
-                  <span class="param">idInternalCustomer
+                  <span class="param">idRiskTrail
+                    <span>required, type: integer</span>
+                  </span>
+                  <p>Declare in URL path. The unique numeric identifier of the Risk Trail.</p>
+                </div>
+              
+                <div class="parameter">
+                  <span class="param">idApprovalStatus
+                    <span>required, type: integer</span>
+                  </span>
+                  <p>Declare in request body. 1 = Approved, 2 = Rejected.</p>
+                </div>
+              
+                <div class="parameter">
+                  <span class="param">idRiskType
+                    <span>required, type: integer</span>
+                  </span>
+                  <p>Declare in request body. 1 = Low, 2 = Medium, 3 = High, 4 = Extremely High.</p>
+                </div>
+              
+                <div class="parameter">
+                  <span class="param">comments
                     <span>required, type: string</span>
                   </span>
-                  <p>Declare in query string. The Internal Customer Number of the requested Customer.</p>
+                  <p>Some comments about this approval</p>
                 </div>
               
             </div>
@@ -64,7 +102,7 @@
                 </tr>
                 <tr>
                   <td>HTTP Method</td>
-                  <td>DELETE</td>
+                  <td>PUT</td>
                 </tr>
                 <tr>
                   <td>Login Required</td>

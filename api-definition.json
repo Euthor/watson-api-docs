@@ -110,7 +110,7 @@
     }, {
       "action": "POST",
       "uri": "/api/customer",
-      "description": "Create a new Customer. Responds with the unique identifiers of the created Risk and Audit Trails",
+      "description": "Create a new Customer. Responds with the unique identifiers of the created Risk and Audit Trails.",
       "headers": {
         "Content-Type": "application/json",
         "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
@@ -158,7 +158,7 @@
     }, {
       "action": "PUT",
       "uri": "/api/customer?idInternalCustomer=:idInternalCustomer",
-      "description": "Modify an existing Customer. Responds with the unique identifiers of the created Risk and Audit Trails. You can just send the changed fields here. There is no need to send unchanged main/details fields.",
+      "description": "Update an existing Customer. Responds with the unique identifiers of the created Risk and Audit Trails. You can just send the changed fields here. There is no need to send unchanged main/details fields.",
       "headers": {
         "Content-Type": "application/json",
         "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
@@ -209,7 +209,7 @@
     }, {
       "action": "DELETE",
       "uri": "/api/customer?idInternalCustomer=:idInternalCustomer",
-      "description": "Remove a Customer from the system.",
+      "description": "Delete a Customer from the system.",
       "params": {
         "idInternalCustomer": {
           "type": "string",
@@ -254,7 +254,7 @@
     }, {
       "action": "PUT",
       "uri": "/api/customer/risk-trails/:idRiskTrail",
-      "description": "Update/Approve a Risk Trail.",
+      "description": "Update a Risk Trail. Used to approve a Risk Trail.",
       "headers": {
         "Content-Type": "application/json",
         "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
