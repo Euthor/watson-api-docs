@@ -23,8 +23,7 @@ $ gem specific_install https://github.com/malachheb/calamum
 Edit `api-definition.json` then:
 
 ```bash
-# IMPORTANT: Change the -p value to YOUR appropriate path.
-$ calamum -f api-definition.json -t twitter -p /Applications/MAMP/htdocs/watson-api-docs
+$ calamum -f api-definition.json -t twitter -p ${PWD}
 ```
 
 The docs should be generated in `/docs` directory as a Bootstrap template.
