@@ -321,5 +321,5 @@ resources:
         required: true
       comments:
         type: string
-        description: Some comments about this approval
+        description: Some comments about this approval.
         required: true
