@@ -2,6 +2,13 @@
 EuComply/Watson API Documentation
 
 
+## View the Docs (for external users)
+
+Visit: https://euthor.github.io/watson-api-docs/docs/
+
+
+## Edit Docs (for Euthor developers)
+
 ### Install dependencies:
 
 Install [calamum](https://github.com/malachheb/calamum).
