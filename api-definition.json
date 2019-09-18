@@ -50,6 +50,10 @@
             "required": true
           }
         },
+        "request": {
+          "username": "Administrator",
+          "password": "sample-password-Sx123"
+        },
         "response": {
           "success": true,
           "token": "eyJhbGciOiJIUzI1NiJ9.YWRtaW5pc3RyYXRvciQyYSQwNCQycXlNL05hZDYudkN1cXpsRjNibkguRnZTZS9MRHNRRmFuNUpwNzd5cGo3QmsuM3pqUURmaQ.M1qhGoR-LBtJI4WnSjxLLy-OzofSCqmFhcM9QdTdM7Y"
