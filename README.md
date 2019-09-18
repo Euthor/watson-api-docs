@@ -6,7 +6,7 @@ EuComply/Watson API Documentation
 
 - Download (or clone) this repository. Click the big green button on top bar
   that says "Clone or Download".
-- Open the following link in your browser: `/docs/index.html`.
+- Open the following link in your browser: `docs/index.html`.
 
 ## Edit Docs (for Euthor developers)
 
