@@ -3,7 +3,7 @@
   "url": "http://localhost:5003",
   "version": "1.0",
   "copyright": "2019",
-  "description": "REST API documentation for EUComply. For issues/questions create a new issue at: https://github.com/Euthor/watson-api-docs/issues",
+  "description": "REST API documentation for EUComply. For issues/questions create a new issue at: https://github.com/Euthor/watson-api-docs/issues.",
   "authentication": "You authenticate each request by passing an x-access-token header with a valid token. View the Login Resource in Resources page for more details.",
   "errors": {
     "http_errors": [{
