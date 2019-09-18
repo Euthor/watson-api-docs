@@ -114,12 +114,12 @@
       "params": {
         "main": {
           "type": "object",
-          "description": "The main details of a Customer. See sample request.",
+          "description": "Declare in request body. The main details of a Customer. See sample request.",
           "required": true
         },
         "details": {
           "type": "object",
-          "description": "The details of the Customer. See sample request.",
+          "description": "Declare in request body. The details of the Customer. See sample request.",
           "required": true
         }
       },
@@ -276,9 +276,6 @@
           "description": "Some comments about this approval",
           "required": true
         }
-      },
-      "response": {
-        "total": 310
       }
     }]
   }
