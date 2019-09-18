@@ -1,12 +1,9 @@
 # watson-api-docs
 EuComply/Watson API Documentation
 
-
 ## View the Docs (for external users)
 
-- Download (or clone) this repository. Click the big green button on top bar
-  that says "Clone or Download".
-- Open the following link in your browser: `docs/index.html`.
+- Visit https://euthor.github.io/watson-api-docs/ to view the documentation.
 
 ## Edit Docs (for Euthor developers)
 
@@ -24,7 +21,7 @@ $ gem specific_install https://github.com/malachheb/calamum
 Edit `api-definition.json` then:
 
 ```bash
-$ calamum -f api-definition.json -t twitter -p ${PWD}
+$ sh build.sh
 ```
 
 The docs should be generated in `/docs` directory as a Bootstrap template.
