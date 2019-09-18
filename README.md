@@ -24,7 +24,7 @@ Edit `api-definition.json` then:
 $ sh build.sh
 ```
 
-The docs should be generated in `/docs` directory as a Bootstrap template.
+The docs should be generated in `/docs` directory.
 
 ### Authors
 
