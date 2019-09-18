@@ -20,7 +20,7 @@ errors:
     description: The request was invalid, usually because the request contains invalid request body data.
      If this is the case, the response body will contain a message indicating the invalid fields and their issues.
   - code: 401
-    text: Unauthorized Request
+    text: Unauthorized
     description: The x-access-token is not valid or the username/password do not match when logging-in.
   - code: 403
     text: Forbidden
