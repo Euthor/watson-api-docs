@@ -4,8 +4,7 @@ EuComply/Watson API Documentation
 
 ## View the Docs (for external users)
 
-Visit: https://euthor.github.io/watson-api-docs/docs/
-
+Open the following link in your browser: `/docs/index.html`.
 
 ## Edit Docs (for Euthor developers)
 
@@ -23,7 +22,7 @@ $ gem specific_install https://github.com/malachheb/calamum
 Edit `api-definition.json` then:
 
 ```bash
-$ calamum -f api-definition.json -t twitter -p ${PWD} --sort 
+$ calamum -f api-definition.json -t twitter -p ${PWD}
 ```
 
 The docs should be generated in `/docs` directory as a Bootstrap template.
