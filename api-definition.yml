@@ -33,7 +33,7 @@ resources:
   login:
   - action: POST
     uri: "/api/login"
-    description: Login and receive an access token to be used as an x-access-token
+    description: Login using username/password and receive an access token to be used as an x-access-token
       header in subsequent requests. Ensure the requested user has the appropriate
       priviledges for subsequent requests.
     headers:
