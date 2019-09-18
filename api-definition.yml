@@ -3,10 +3,11 @@ name: EUComply's REST API Docs
 url: http://localhost:5003
 version: '1.0'
 copyright: '2019'
-description: 'REST API documentation for EUComply. For issues/questions create a new
-  issue at: https://github.com/Euthor/watson-api-docs/issues.'
-authentication: You authenticate each request by passing an x-access-token header
-  with a valid token. View the Login Resource in Resources page for more details.
+description: 'REST API documentation for EUComply. For issues/questions create
+  a new issue at: https://github.com/Euthor/watson-api-docs/issues.'
+authentication: You authenticate each request by passing an x-access-token
+  header with a valid token. View the Login Resource in Resources page
+  for more details on how to obtain a valid access token.
 errors:
   http_errors:
   - code: 200
@@ -17,14 +18,20 @@ errors:
     description: Success. There is no response data.
   - code: 400
     text: Bad Request
-    description: The request was invalid, usually because the request contains invalid request body data.
-     If this is the case, the response body will contain a message indicating the invalid fields and their issues.
+    description: The request was invalid, usually because the request contains
+     invalid request body data. If this is the case, the response body will
+     contain a message indicating the invalid properties and their issues.
   - code: 401
     text: Unauthorized
-    description: The x-access-token is not valid or the username/password do not match when logging-in.
+    description: The x-access-token is not valid or the username/password do
+      not match when logging-in.
   - code: 403
     text: Forbidden
-    description: The x-access-token is valid but the associated user does not have permissions for this action.
+    description: The x-access-token is valid but the associated user does not
+      have permissions for this action.
+  - code: 404
+    text: Not Found
+    description: The entity does not exist.
   - code: 500
     text: Server Error
     description: The server encountered an error.
@@ -33,9 +40,9 @@ resources:
   login:
   - action: POST
     uri: "/api/login"
-    description: Login using username & password and receive an access token to be used as an x-access-token
-      header in subsequent requests. Ensure the requested user has the appropriate
-      priviledges for subsequent requests.
+    description: Login using username & password and receive an access token to
+      be used as an x-access-token header in subsequent requests. Ensure the
+      requested user has the appropriate priviledges for subsequent requests.
     headers:
       Content-Type: application/json
     params:
@@ -52,7 +59,7 @@ resources:
       password: sample-password-Sx123
     response:
       success: true
-      token: eyJhbGciOiJIUzI1NiJ9.YWRtaW5pc3RyYXRvciQyYSQwNCQycXlNL05hZDYudkN1cXpsRjNibkguRnZTZS9MRHNRRmFuNUpwNzd5cGo3QmsuM3pqUURmaQ.M1qhGoR-LBtJI4WnSjxLLy-OzofSCqmFhcM9QdTdM7Y
+      token: eyJhbGciOiJIUzI1NiJ9...
   customer:
   - action: GET
     uri: "/api/customer?idInternalCustomer=:idInternalCustomer"
@@ -63,8 +70,8 @@ resources:
     params:
       idInternalCustomer:
         type: string
-        description: Declare in query string. The Internal Customer Number of the
-          requested Customer.
+        description: Declare in query string. The Internal Customer Number of
+          the requested Customer.
         required: true
     response:
       singles:
@@ -96,21 +103,25 @@ resources:
           profession: Programmer
   - action: POST
     uri: "/api/customer"
-    description: Create a new Customer. Responds with the unique identifiers of the
-      created Risk and Audit Trails.
+    description: Create a new Customer. Responds with the unique identifiers of
+      the created Risk and Audit Trails.
     headers:
       Content-Type: application/json
       x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
     params:
       main:
         type: object
-        description: Declare in request body. The main details of a Customer. See
-          sample request.
+        description: Declare in request body. Contains a list of properties,
+          describing the primary attributes of the Customer. See sample request
+          below for more details as to what properties must be contained in this
+          object.
         required: true
       details:
         type: object
-        description: Declare in request body. The details of the Customer. See sample
-          request.
+        description: Declare in request body. Contains a list of properties,
+          describing the secondary attributes of the Customer. See sample request
+          below for more details as to what properties must be contained in this
+          object.
         required: true
     request:
       details:
@@ -138,27 +149,30 @@ resources:
       idRiskTrail: 1
   - action: PUT
     uri: "/api/customer?idInternalCustomer=:idInternalCustomer"
-    description: Update an existing Customer. Responds with the unique identifiers
-      of the created Risk and Audit Trails. You can just send the changed fields here.
-      There is no need to send unchanged main/details fields.
+    description: Update an existing Customer. Responds with the unique
+      identifiers of the created Risk and Audit Trails.
     headers:
       Content-Type: application/json
       x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
     params:
       idInternalCustomer:
         type: string
-        description: Declare in query string. The Internal Customer Number of the
-          requested Customer.
+        description: Declare in query string. The Internal Customer Number of
+          the requested Customer.
         required: true
       main:
         type: object
-        description: Declare in request body. The main details of a Customer. See
-          sample request.
+        description: Declare in request body.
+          See 'POST /api/customer' example request for a full list of
+          properties you can use. You can ommit properties that are not
+          changed.
         required: true
       details:
         type: object
-        description: Declare in request body. The details of the Customer. See sample
-          request.
+        description: Declare in request body.
+          See 'POST /api/customer' example request for a full list of
+          properties you can use. You can ommit properties that are not
+          changed.
         required: true
     request:
       details:
@@ -177,29 +191,30 @@ resources:
     params:
       idInternalCustomer:
         type: string
-        description: Declare in query string. The Internal Customer Number of the
-          requested Customer.
+        description: Declare in query string. The Internal Customer Number of
+          the requested Customer.
         required: true
   Risk Trail:
   - action: GET
     uri: "/api/customer/risk-trails?idInternalCustomer=:idInternalCustomer&limits=:limits"
-    description: Read the Risk Trails for a given Customer. Note that the last Risk
-      Trail also contains the current approval status for the Customer.
+    description: Read the Risk Trails for a given Customer. Note that the
+      last Risk Trail also contains the current approval status for the
+      Customer.
     headers:
       Content-Type: application/json
       x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
     params:
       idInternalCustomer:
         type: string
-        description: Declare in query string. The Internal Customer Number of the
-          requested Customer.
+        description: Declare in query string. The Internal Customer Number of
+          the requested Customer.
         required: true
       limits:
         type: integer
-        description: Declare in query string. How many Risk Trails to fetch. Note
-          that Risk Trails are fetched in descending creation order so limits=1 will
-          fetch the last Risk Trail. If the last Risk Trail has idApprovalStatus=null
-          then the Customer Approval Status is 'Pending'.
+        description: Declare in query string. How many Risk Trails to fetch.
+          Note that Risk Trails are fetched in descending creation order so
+          limits=1 will fetch the last Risk Trail. If the last Risk Trail has
+          idApprovalStatus=null then the Customer Approval Status is 'Pending'.
         required: true
     response:
       id: 1
@@ -222,8 +237,8 @@ resources:
     params:
       idRiskTrail:
         type: integer
-        description: Declare in URL path. The unique numeric identifier of the Risk
-          Trail.
+        description: Declare in URL path. The unique numeric identifier of the
+          Risk Trail.
         required: true
       idApprovalStatus:
         type: integer
@@ -231,8 +246,8 @@ resources:
         required: true
       idRiskType:
         type: integer
-        description: Declare in request body. 1 = Low, 2 = Medium, 3 = High, 4 = Extremely
-          High.
+        description: Declare in request body.
+          1 = Low, 2 = Medium, 3 = High, 4 = Extremely High.
         required: true
       comments:
         type: string
