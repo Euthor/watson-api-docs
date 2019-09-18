@@ -39,7 +39,7 @@
                 
                   <tr>
                     <td class="views-field-title">
-                      <a href="_api_login_post_70104117284860.html">POST /api/login</a>
+                      <a href="_api_login_post_70101068335640.html">POST /api/login</a>
                     </td>
                     <td class="views-field-body">
                       Login using username & password and receive an access token to be used as an x-access-token header in subsequent requests. Ensure the requested user has the appropriate priviledges for subsequent requests.
@@ -64,7 +64,7 @@
                 
                   <tr>
                     <td class="views-field-title">
-                      <a href="_api_customer_idInternalCustomer_idInternalCustomer_get_70104117284660.html">GET /api/customer?idInternalCustomer=:idInternalCustomer</a>
+                      <a href="_api_customer_idInternalCustomer_idInternalCustomer_get_70101068335440.html">GET /api/customer?idInternalCustomer=:idInternalCustomer</a>
                     </td>
                     <td class="views-field-body">
                       Read a Customer by his Internal Customer Number
@@ -73,7 +73,7 @@
                 
                   <tr>
                     <td class="views-field-title">
-                      <a href="_api_customer_post_70104117284420.html">POST /api/customer</a>
+                      <a href="_api_customer_post_70101068335280.html">POST /api/customer</a>
                     </td>
                     <td class="views-field-body">
                       Create a new Customer. Responds with the unique identifiers of the created Risk and Audit Trails.
@@ -82,7 +82,7 @@
                 
                   <tr>
                     <td class="views-field-title">
-                      <a href="_api_customer_idInternalCustomer_idInternalCustomer_put_70104117284240.html">PUT /api/customer?idInternalCustomer=:idInternalCustomer</a>
+                      <a href="_api_customer_idInternalCustomer_idInternalCustomer_put_70101068335120.html">PUT /api/customer?idInternalCustomer=:idInternalCustomer</a>
                     </td>
                     <td class="views-field-body">
                       Update an existing Customer. Responds with the unique identifiers of the created Risk and Audit Trails.
@@ -91,10 +91,35 @@
                 
                   <tr>
                     <td class="views-field-title">
-                      <a href="_api_customer_idInternalCustomer_idInternalCustomer_delete_70104117284080.html">DELETE /api/customer?idInternalCustomer=:idInternalCustomer</a>
+                      <a href="_api_customer_idInternalCustomer_idInternalCustomer_delete_70101068334940.html">DELETE /api/customer?idInternalCustomer=:idInternalCustomer</a>
                     </td>
                     <td class="views-field-body">
                       Delete a Customer from the system.
+                    </td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+            <table>
+              <caption>
+                <strong>Risk analysis</strong>
+                <p>These endpoints belong to the Risk Analysis resource.</p>
+              </caption>
+              <thead>
+                <tr>
+                  <th class="views-field-title">Resource</th>
+                  <th class="views-field-title">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td class="views-field-title">
+                      <a href="_api_customer_risk_idInternalCustomer_idInternalCustomer_get_70101068334720.html">GET /api/customer/risk?idInternalCustomer=:idInternalCustomer</a>
+                    </td>
+                    <td class="views-field-body">
+                      Get a Risk Analysis, also known as Calculated Risk, for a given Customer.
                     </td>
                   </tr>
                 
@@ -116,7 +141,7 @@
                 
                   <tr>
                     <td class="views-field-title">
-                      <a href="_api_customer_risk_trails_idInternalCustomer_idInternalCustomer_limits_limits_get_70104117283880.html">GET /api/customer/risk-trails?idInternalCustomer=:idInternalCustomer&limits=:limits</a>
+                      <a href="_api_customer_risk_trails_idInternalCustomer_idInternalCustomer_limits_limits_get_70101068334520.html">GET /api/customer/risk-trails?idInternalCustomer=:idInternalCustomer&limits=:limits</a>
                     </td>
                     <td class="views-field-body">
                       Read the Risk Trails for a given Customer. Note that the last Risk Trail also contains the current approval status for the Customer.
@@ -125,7 +150,7 @@
                 
                   <tr>
                     <td class="views-field-title">
-                      <a href="_api_customer_risk_trails_idRiskTrail_put_70104117283680.html">PUT /api/customer/risk-trails/:idRiskTrail</a>
+                      <a href="_api_customer_risk_trails_idRiskTrail_put_70101068334340.html">PUT /api/customer/risk-trails/:idRiskTrail</a>
                     </td>
                     <td class="views-field-body">
                       Update a Risk Trail. Used to approve a Risk Trail.
