@@ -9,7 +9,8 @@ EuComply/Watson API Documentation
 
 ### Install dependencies:
 
-Install [calamum](https://github.com/malachheb/calamum).
+Install [calamum](https://github.com/malachheb/calamum). The gem doesn't
+correspond to latest published gem so we have to bundle from Github:
 
 ```bash
 $ gem install specific_install
