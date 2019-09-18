@@ -20,7 +20,7 @@ $ gem specific_install https://github.com/malachheb/calamum
 
 ### Edit API Definition and generate docs:
 
-Edit `api-definition.json` then:
+Edit `api-definition.yml` then:
 
 ```bash
 $ sh build.sh

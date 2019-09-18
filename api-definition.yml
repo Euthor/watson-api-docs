@@ -1,0 +1,237 @@
+---
+name: EUComply's REST API
+url: http://localhost:5003
+version: '1.0'
+copyright: '2019'
+description: 'REST API documentation for EUComply. For issues/questions create a new
+  issue at: https://github.com/Euthor/watson-api-docs/issues.'
+authentication: You authenticate each request by passing an x-access-token header
+  with a valid token. View the Login Resource in Resources page for more details.
+errors:
+  http_errors:
+  - code: 200
+    text: OK
+    description: Success. There is response data as well.
+  - code: 204
+    text: No Content
+    description: Success. There is no response data.
+  - code: 400
+    text: Bad Request
+    description: The request was invalid (possibly because of validation errors) or
+      cannot be otherwise served.
+  - code: 401
+    text: Unauthorized Request
+    description: The x-access-token is not valid.
+  - code: 500
+    text: Server Error
+    description: The server encountered an error.
+  api_errors: []
+resources:
+  login:
+  - action: POST
+    uri: "/api/login"
+    description: Login and receive an access token to be used as an x-access-token
+      header in subsequent requests. Ensure the requested user has the appropriate
+      priviledges for subsequent requests.
+    headers:
+      Content-Type: application/json
+    params:
+      username:
+        type: string
+        description: The username of the user.
+        required: true
+      password:
+        type: string
+        description: The password of the user.
+        required: true
+    request:
+      username: Administrator
+      password: sample-password-Sx123
+    response:
+      success: true
+      token: eyJhbGciOiJIUzI1NiJ9.YWRtaW5pc3RyYXRvciQyYSQwNCQycXlNL05hZDYudkN1cXpsRjNibkguRnZTZS9MRHNRRmFuNUpwNzd5cGo3QmsuM3pqUURmaQ.M1qhGoR-LBtJI4WnSjxLLy-OzofSCqmFhcM9QdTdM7Y
+  customer:
+  - action: GET
+    uri: "/api/customer?idInternalCustomer=:idInternalCustomer"
+    description: Read a Customer by his Internal Customer Number
+    headers:
+      Content-Type: application/json
+      x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+    params:
+      idInternalCustomer:
+        type: string
+        description: Declare in query string. The Internal Customer Number of the
+          requested Customer.
+        required: true
+    response:
+      singles:
+        main:
+          idCustomer: 57
+          idUserLastModified: 1
+          idInternalCustomer: gvILaXH
+          relationshipStartDate: '2001-01-19'
+          relationshipEndDate: '2004-12-24'
+          referralAgent:
+          printName: gvILaXH
+          otherInfo: Lorem Ipsum Comment 2
+          idCustomerStatus: 1
+          idCustomerType: 1
+          idUserResponsibleOfficer: 1
+          idUser: 1
+        details:
+          idCustomer: 57
+          firstName: John
+          maidenName: Sierra
+          lastName: Doe
+          dateBirth: '1965-02-01'
+          nonFaceToFace: true
+          idCountryNationality: 137
+          idCountryBirth: 137
+          idCountryResidence: 137
+          idGender: 3
+          idMaritalStatus: 1
+          profession: Programmer
+  - action: POST
+    uri: "/api/customer"
+    description: Create a new Customer. Responds with the unique identifiers of the
+      created Risk and Audit Trails.
+    headers:
+      Content-Type: application/json
+      x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+    params:
+      main:
+        type: object
+        description: Declare in request body. The main details of a Customer. See
+          sample request.
+        required: true
+      details:
+        type: object
+        description: Declare in request body. The details of the Customer. See sample
+          request.
+        required: true
+    request:
+      details:
+        dateBirth: '1965-02-01'
+        firstName: John
+        maidenName: Sierra
+        lastName: Doe
+        idCountryBirth: 137
+        idCountryNationality: 137
+        idCountryResidence: 137
+        idGender: 3
+        idMaritalStatus: 1
+        nonFaceToFace: true
+        profession: Accountant
+      main:
+        idCustomerStatus: 1
+        idCustomerType: 1
+        idInternalCustomer: JD001
+        idUserResponsibleOfficer: 1
+        otherInfo: Lorem Ipsum Comment
+        relationshipStartDate: '2001-01-19'
+        relationshipEndDate: '2004-12-24'
+    response:
+      idAuditTrail: 1
+      idRiskTrail: 1
+  - action: PUT
+    uri: "/api/customer?idInternalCustomer=:idInternalCustomer"
+    description: Update an existing Customer. Responds with the unique identifiers
+      of the created Risk and Audit Trails. You can just send the changed fields here.
+      There is no need to send unchanged main/details fields.
+    headers:
+      Content-Type: application/json
+      x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+    params:
+      idInternalCustomer:
+        type: string
+        description: Declare in query string. The Internal Customer Number of the
+          requested Customer.
+        required: true
+      main:
+        type: object
+        description: Declare in request body. The main details of a Customer. See
+          sample request.
+        required: true
+      details:
+        type: object
+        description: Declare in request body. The details of the Customer. See sample
+          request.
+        required: true
+    request:
+      details:
+        dateBirth: '1973-04-15'
+        firstName: Johnnie
+        profession: Programmer
+      main:
+        idCustomerStatus: 2
+        relationshipEndDate: '2012-12-24'
+    response:
+      idAuditTrail: 2
+      idRiskTrail: 2
+  - action: DELETE
+    uri: "/api/customer?idInternalCustomer=:idInternalCustomer"
+    description: Delete a Customer from the system.
+    params:
+      idInternalCustomer:
+        type: string
+        description: Declare in query string. The Internal Customer Number of the
+          requested Customer.
+        required: true
+  Risk Trail:
+  - action: GET
+    uri: "/api/customer/risk-trails?idInternalCustomer=:idInternalCustomer&limits=:limits"
+    description: Read the Risk Trails for a given Customer. Note that the last Risk
+      Trail also contains the current approval status for the Customer.
+    headers:
+      Content-Type: application/json
+      x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+    params:
+      idInternalCustomer:
+        type: string
+        description: Declare in query string. The Internal Customer Number of the
+          requested Customer.
+        required: true
+      limits:
+        type: integer
+        description: Declare in query string. How many Risk Trails to fetch. Note
+          that Risk Trails are fetched in descending creation order so limits=1 will
+          fetch the last Risk Trail. If the last Risk Trail has idApprovalStatus=null
+          then the Customer Approval Status is 'Pending'.
+        required: true
+    response:
+      id: 1
+      idRiskTrail: 1
+      reviewed: false
+      reviewedDate:
+      comments:
+      idCustomer: 1
+      idRiskType:
+      idUserReviewer:
+      userReviewerName:
+      idApprovalStatus:
+      approvalStatusName:
+  - action: PUT
+    uri: "/api/customer/risk-trails/:idRiskTrail"
+    description: Update a Risk Trail. Used to approve a Risk Trail.
+    headers:
+      Content-Type: application/json
+      x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+    params:
+      idRiskTrail:
+        type: integer
+        description: Declare in URL path. The unique numeric identifier of the Risk
+          Trail.
+        required: true
+      idApprovalStatus:
+        type: integer
+        description: Declare in request body. 1 = Approved, 2 = Rejected.
+        required: true
+      idRiskType:
+        type: integer
+        description: Declare in request body. 1 = Low, 2 = Medium, 3 = High, 4 = Extremely
+          High.
+        required: true
+      comments:
+        type: string
+        description: Some comments about this approval
+        required: true

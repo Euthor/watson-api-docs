@@ -1,2 +1,2 @@
-calamum -f api-definition.json -t twitter -p ${PWD}
+calamum -f api-definition.yml -t twitter -p ${PWD}
 touch docs/.nojekyll
