@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>EUComply/Watson's REST API</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link type="text/css" rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="no-sidebars">
+    <div id="page">
+      <div id="header-outer">
+        <div id="header">
+          <a href="/" id="logo" title="Home">EUComply/Watson's REST API</a>
+
+          <ul id="title-nav">
+            <li><a href="overview.html">Overview</a></li>
+            <li><a href="authentication.html">Authentication</a></li>
+            <li><a href="index.html">Resources</a></li>
+            <li><a href="errors.html">Errors</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="content-outer">
+        <h1>REST API v.1.0</h1>
+        <div class="content api-docs">
+          
+            <table>
+              <caption>
+                <strong>Login</strong>
+                <p>These endpoints belong to the login resource.</p>
+              </caption>
+              <thead>
+                <tr>
+                  <th class="views-field-title">Resource</th>
+                  <th class="views-field-title">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td class="views-field-title">
+                      <a href="_api_login_post_70324377036900.html">POST /api/login</a>
+                    </td>
+                    <td class="views-field-body">
+                      Login and receive an access token to be used as an x-access-token header in subsequent requests. Ensure the requested user has the appropriate priviledges for subsequent requests.
+                    </td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+            <table>
+              <caption>
+                <strong>Customer</strong>
+                <p>These endpoints belong to the customer resource.</p>
+              </caption>
+              <thead>
+                <tr>
+                  <th class="views-field-title">Resource</th>
+                  <th class="views-field-title">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td class="views-field-title">
+                      <a href="_api_customer_idInternalCustomer_idInternalCustomer_get_70324377036580.html">GET /api/customer?idInternalCustomer=:idInternalCustomer</a>
+                    </td>
+                    <td class="views-field-body">
+                      Retrieve a Customer by his Internal Customer Number
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="views-field-title">
+                      <a href="_api_customer_post_70324377036360.html">POST /api/customer</a>
+                    </td>
+                    <td class="views-field-body">
+                      Create a new Customer. Responds with the unique identifiers of the created Risk and Audit Trails
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="views-field-title">
+                      <a href="_api_customer_idInternalCustomer_idInternalCustomer_put_70324377036160.html">PUT /api/customer?idInternalCustomer=:idInternalCustomer</a>
+                    </td>
+                    <td class="views-field-body">
+                      Modify an existing Customer. Responds with the unique identifiers of the created Risk and Audit Trails. You can just send the changed fields here. There is no need to send unchanged main/details fields.
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="views-field-title">
+                      <a href="_api_customer_idInternalCustomer_idInternalCustomer_delete_70324377035960.html">DELETE /api/customer?idInternalCustomer=:idInternalCustomer</a>
+                    </td>
+                    <td class="views-field-body">
+                      Remove a Customer from the system.
+                    </td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+            <table>
+              <caption>
+                <strong>Risk trail</strong>
+                <p>These endpoints belong to the Risk Trail resource.</p>
+              </caption>
+              <thead>
+                <tr>
+                  <th class="views-field-title">Resource</th>
+                  <th class="views-field-title">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td class="views-field-title">
+                      <a href="_api_customer_risk_trails_idInternalCustomer_idInternalCustomer_limits_limits_get_70324377035660.html">GET /api/customer/risk-trails?idInternalCustomer=:idInternalCustomer&limits=:limits</a>
+                    </td>
+                    <td class="views-field-body">
+                      Fetch the Risk Trails for a given Customer. Note that the last Risk Trail also contains the current approval status for the Customer.
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="views-field-title">
+                      <a href="_api_customer_risk_trails_idRiskTrail_put_70324377035440.html">PUT /api/customer/risk-trails/:idRiskTrail</a>
+                    </td>
+                    <td class="views-field-body">
+                      Approve a Risk Trail.
+                    </td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </div>
+      </div>
+
+      <div id="footer-outer">
+        <div id="footer">EUComply/Watson's REST API &copy; 2019</div>
+      </div>
+
+    </div>
+  </body>
+</html>
