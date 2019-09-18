@@ -21,7 +21,10 @@ errors:
       cannot be otherwise served.
   - code: 401
     text: Unauthorized Request
-    description: The x-access-token is not valid.
+    description: The x-access-token is not valid or the username/password do not match when logging-in.
+  - code: 403
+    text: Forbidden
+    description: The x-access-token is valid but the associated user does not have permissions for this action.
   - code: 500
     text: Server Error
     description: The server encountered an error.

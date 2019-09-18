@@ -86,7 +86,19 @@
                       Unauthorized Request
                     </td>
 		    <td class="views-field">
-                      The x-access-token is not valid.
+                      The x-access-token is not valid or the username/password do not match when logging-in.
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="">
+                      403
+                    </td>
+                    <td class="views-field">
+                      Forbidden
+                    </td>
+		    <td class="views-field">
+                      The x-access-token is valid but the associated user does not have permissions for this action.
                     </td>
                   </tr>
                 
