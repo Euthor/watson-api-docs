@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>/api/customer/risk-trails/:idRiskTrail</title>
+    <title>/api/customer/risk-trails?idInternalCustomer=:idInternalCustomer&limits=:limits</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link type="text/css" rel="stylesheet" href="assets/css/main.css" />
   </head>
@@ -23,13 +23,13 @@
 
       <div id="content-outer">
         <div class="page-header">
-          <h1>PUT /api/customer/risk-trails/:idRiskTrail</h1>
+          <h1>GET /api/customer/risk-trails?idInternalCustomer=:idInternalCustomer&limits=:limits</h1>
         </div>
 
         <div id="content-main">
           <div class="field field-el">
             <h2>Description</h2>
-            <p>Approve a Risk Trail.</p>
+            <p>Read the Risk Trails for a given Customer. Note that the last Risk Trail also contains the current approval status for the Customer.</p>
           </div>
 
 	  
@@ -56,31 +56,17 @@
             <div class="odd">
               
                 <div class="parameter">
-                  <span class="param">idRiskTrail
-                    <span>required, type: integer</span>
-                  </span>
-                  <p>Declare in URL path. The unique numeric identifier of the Risk Trail.</p>
-                </div>
-              
-                <div class="parameter">
-                  <span class="param">idApprovalStatus
-                    <span>required, type: integer</span>
-                  </span>
-                  <p>Declare in request body. 1 = Approved, 2 = Rejected.</p>
-                </div>
-              
-                <div class="parameter">
-                  <span class="param">idRiskType
-                    <span>required, type: integer</span>
-                  </span>
-                  <p>Declare in request body. 1 = Low, 2 = Medium, 3 = High, 4 = Extremely High.</p>
-                </div>
-              
-                <div class="parameter">
-                  <span class="param">comments
+                  <span class="param">idInternalCustomer
                     <span>required, type: string</span>
                   </span>
-                  <p>Some comments about this approval</p>
+                  <p>Declare in query string. The Internal Customer Number of the requested Customer.</p>
+                </div>
+              
+                <div class="parameter">
+                  <span class="param">limits
+                    <span>required, type: integer</span>
+                  </span>
+                  <p>Declare in query string. How many Risk Trails to fetch. Note that Risk Trails are fetched in descending creation order so limits=1 will fetch the last Risk Trail.</p>
                 </div>
               
             </div>
@@ -88,6 +74,13 @@
 
           
 
+          
+            <div class="group-example-request">
+              <h2>Example Response</h2>
+              <div class="content">
+                <pre class="prettyprint">{<br/>&nbsp;&nbsp;&nbsp;&nbsp;"id": 1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"idRiskTrail": 1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"reviewed": false,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"reviewedDate": null,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"comments": null,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"idCustomer": 1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"idRiskType": null,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"idUserReviewer": null,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"userReviewerName": null,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"idApprovalStatus": null,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"approvalStatusName": null<br/>}</pre>
+              </div>
+            </div>
           
         </div>
 
@@ -102,7 +95,7 @@
                 </tr>
                 <tr>
                   <td>HTTP Method</td>
-                  <td>PUT</td>
+                  <td>GET</td>
                 </tr>
                 <tr>
                   <td>Login Required</td>

@@ -17,15 +17,15 @@
     }, {
       "code": 400,
       "text": "Bad Request",
-      "description": "The request was invalid or cannot be otherwise served"
+      "description": "The request was invalid (possibly because of validation errors) or cannot be otherwise served."
     }, {
       "code": 401,
       "text": "Unauthorized Request",
-      "description": "The x-access-token is not valid"
+      "description": "The x-access-token is not valid."
     }, {
       "code": 500,
       "text": "Server Error",
-      "description": "The server encountered an error"
+      "description": "The server encountered an error."
     }],
     "api_errors":[]
   },
@@ -59,7 +59,7 @@
     "customer": [{
       "action": "GET",
       "uri": "/api/customer?idInternalCustomer=:idInternalCustomer",
-      "description": "Retrieve a Customer by his Internal Customer Number",
+      "description": "Read a Customer by his Internal Customer Number",
       "headers": {
         "Content-Type": "application/json",
         "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
@@ -217,7 +217,7 @@
     "Risk Trail": [{
       "action": "GET",
       "uri": "/api/customer/risk-trails?idInternalCustomer=:idInternalCustomer&limits=:limits",
-      "description": "Fetch the Risk Trails for a given Customer. Note that the last Risk Trail also contains the current approval status for the Customer.",
+      "description": "Read the Risk Trails for a given Customer. Note that the last Risk Trail also contains the current approval status for the Customer.",
       "headers": {
         "Content-Type": "application/json",
         "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
@@ -250,7 +250,7 @@
     }, {
       "action": "PUT",
       "uri": "/api/customer/risk-trails/:idRiskTrail",
-      "description": "Approve a Risk Trail.",
+      "description": "Update/Approve a Risk Trail.",
       "headers": {
         "Content-Type": "application/json",
         "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
