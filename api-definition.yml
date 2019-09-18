@@ -7,7 +7,10 @@ description: 'REST API documentation for EUComply. For issues/questions create
   a new issue at: https://github.com/Euthor/watson-api-docs/issues.'
 authentication: You authenticate each request by passing an x-access-token
   header with a valid token. View the Login Resource in Resources page
-  for more details on how to obtain a valid access token.
+  for more details on how to obtain a valid access token. You are expected
+  to cycle the access token, by logging-in again, every now and then
+  (ideally every other day) to ensure that a compromised token is not
+  indefinetely valid.
 errors:
   http_errors:
   - code: 200
