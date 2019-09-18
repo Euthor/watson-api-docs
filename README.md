@@ -23,7 +23,7 @@ $ gem specific_install https://github.com/malachheb/calamum
 Edit `api-definition.json` then:
 
 ```bash
-$ calamum -f api-definition.json -t twitter -p ${PWD}
+$ calamum -f api-definition.json -t twitter -p ${PWD} --sort 
 ```
 
 The docs should be generated in `/docs` directory as a Bootstrap template.
