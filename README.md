@@ -20,13 +20,18 @@ $ gem specific_install https://github.com/malachheb/calamum
 
 ### Edit API Definition and generate docs:
 
-Edit `api-definition.yml` then:
+Edit `api-definition.yml` accordingly and then:
 
 ```bash
 $ sh build.sh
 ```
 
 The docs should be generated in `/docs` directory.
+
+### Push to master
+
+Deploying to `master` branch automatically triggers a Github Pages build which
+publishes the docs at https://euthor.github.io/watson-api-docs/.
 
 ### Authors
 
