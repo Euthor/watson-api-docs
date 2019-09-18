@@ -26,8 +26,8 @@
           
             <table>
               <caption>
-                <strong>Login</strong>
-                <p>These endpoints belong to the login resource.</p>
+                <strong>Risk trail</strong>
+                <p>These endpoints belong to the Risk Trail resource.</p>
               </caption>
               <thead>
                 <tr>
@@ -39,10 +39,19 @@
                 
                   <tr>
                     <td class="views-field-title">
-                      <a href="_api_login_post_70154990658440.html">POST /api/login</a>
+                      <a href="_api_customer_risk_trails_idInternalCustomer_idInternalCustomer_limits_limits_get_70266412229420.html">GET /api/customer/risk-trails?idInternalCustomer=:idInternalCustomer&limits=:limits</a>
                     </td>
                     <td class="views-field-body">
-                      Login and receive an access token to be used as an x-access-token header in subsequent requests. Ensure the requested user has the appropriate priviledges for subsequent requests.
+                      Fetch the Risk Trails for a given Customer. Note that the last Risk Trail also contains the current approval status for the Customer.
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="views-field-title">
+                      <a href="_api_customer_risk_trails_idRiskTrail_put_70266412229200.html">PUT /api/customer/risk-trails/:idRiskTrail</a>
+                    </td>
+                    <td class="views-field-body">
+                      Approve a Risk Trail.
                     </td>
                   </tr>
                 
@@ -64,7 +73,7 @@
                 
                   <tr>
                     <td class="views-field-title">
-                      <a href="_api_customer_idInternalCustomer_idInternalCustomer_get_70154990658180.html">GET /api/customer?idInternalCustomer=:idInternalCustomer</a>
+                      <a href="_api_customer_idInternalCustomer_idInternalCustomer_get_70266412228980.html">GET /api/customer?idInternalCustomer=:idInternalCustomer</a>
                     </td>
                     <td class="views-field-body">
                       Retrieve a Customer by his Internal Customer Number
@@ -73,7 +82,7 @@
                 
                   <tr>
                     <td class="views-field-title">
-                      <a href="_api_customer_post_70154990657980.html">POST /api/customer</a>
+                      <a href="_api_customer_post_70266412228780.html">POST /api/customer</a>
                     </td>
                     <td class="views-field-body">
                       Create a new Customer. Responds with the unique identifiers of the created Risk and Audit Trails
@@ -82,7 +91,7 @@
                 
                   <tr>
                     <td class="views-field-title">
-                      <a href="_api_customer_idInternalCustomer_idInternalCustomer_put_70154990657780.html">PUT /api/customer?idInternalCustomer=:idInternalCustomer</a>
+                      <a href="_api_customer_idInternalCustomer_idInternalCustomer_put_70266412231340.html">PUT /api/customer?idInternalCustomer=:idInternalCustomer</a>
                     </td>
                     <td class="views-field-body">
                       Modify an existing Customer. Responds with the unique identifiers of the created Risk and Audit Trails. You can just send the changed fields here. There is no need to send unchanged main/details fields.
@@ -91,7 +100,7 @@
                 
                   <tr>
                     <td class="views-field-title">
-                      <a href="_api_customer_idInternalCustomer_idInternalCustomer_delete_70154990657580.html">DELETE /api/customer?idInternalCustomer=:idInternalCustomer</a>
+                      <a href="_api_customer_idInternalCustomer_idInternalCustomer_delete_70266412220300.html">DELETE /api/customer?idInternalCustomer=:idInternalCustomer</a>
                     </td>
                     <td class="views-field-body">
                       Remove a Customer from the system.
@@ -103,8 +112,8 @@
           
             <table>
               <caption>
-                <strong>Risk trail</strong>
-                <p>These endpoints belong to the Risk Trail resource.</p>
+                <strong>Login</strong>
+                <p>These endpoints belong to the login resource.</p>
               </caption>
               <thead>
                 <tr>
@@ -116,19 +125,10 @@
                 
                   <tr>
                     <td class="views-field-title">
-                      <a href="_api_customer_risk_trails_idInternalCustomer_idInternalCustomer_limits_limits_get_70154990649280.html">GET /api/customer/risk-trails?idInternalCustomer=:idInternalCustomer&limits=:limits</a>
+                      <a href="_api_login_post_70266412220060.html">POST /api/login</a>
                     </td>
                     <td class="views-field-body">
-                      Fetch the Risk Trails for a given Customer. Note that the last Risk Trail also contains the current approval status for the Customer.
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="views-field-title">
-                      <a href="_api_customer_risk_trails_idRiskTrail_put_70154990649060.html">PUT /api/customer/risk-trails/:idRiskTrail</a>
-                    </td>
-                    <td class="views-field-body">
-                      Approve a Risk Trail.
+                      Login and receive an access token to be used as an x-access-token header in subsequent requests. Ensure the requested user has the appropriate priviledges for subsequent requests.
                     </td>
                   </tr>
                 
