@@ -119,14 +119,20 @@ resources:
         description: Declare in request body. Contains a list of properties,
           describing the primary attributes of the Customer. See sample request
           below for more details as to what properties must be contained in this
-          object.
+          object. Some fields use numeric ids (e.g idCountryBirth) which map to
+          actual values. Since these mappings usually differ for each
+          installation, you are advised to contact Euthor to get a list of the
+          mappings for these particular properties.
         required: true
       details:
         type: object
         description: Declare in request body. Contains a list of properties,
-          describing the secondary attributes of the Customer. See sample request
-          below for more details as to what properties must be contained in this
-          object.
+          describing the secondary attributes of the Customer. See sample
+          request below for more details as to what properties must be contained
+          in this object. Some fields use numeric ids (e.g idCountryBirth)
+          which map to actual values. Since these mappings usually differ for
+          each installation, you are advised to contact Euthor to get a list of
+          the mappings for these particular properties.
         required: true
     request:
       details:
