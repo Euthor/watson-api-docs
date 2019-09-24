@@ -159,7 +159,7 @@ resources:
       idAuditTrail: 1
       idRiskTrail: 1
   - action: PUT
-    uri: "/api/customer/idInternalCustomer/:idInternalCustomer"
+    uri: "/api/customer/:idInternalCustomer"
     description: Update an existing Customer. Responds with the unique
       identifiers of the created Risk and Audit Trails.
     headers:
