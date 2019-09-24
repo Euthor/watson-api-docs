@@ -24,6 +24,8 @@ Edit `api-definition.yml` accordingly and then:
 
 ```bash
 $ sh build.sh
+# Don't forget to *always* do `$ git add --all` before commiting since
+# each build generates *new* files.
 ```
 
 The docs should be generated in `/docs` directory.

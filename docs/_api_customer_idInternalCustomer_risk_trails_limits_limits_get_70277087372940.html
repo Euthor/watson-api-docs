@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>/api/customer/risk-trails?idInternalCustomer=:idInternalCustomer&limits=:limits</title>
+    <title>/api/customer/:idInternalCustomer/risk-trails?limits=:limits</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link type="text/css" rel="stylesheet" href="assets/css/main.css" />
   </head>
@@ -23,7 +23,7 @@
 
       <div id="content-outer">
         <div class="page-header">
-          <h1>GET /api/customer/risk-trails?idInternalCustomer=:idInternalCustomer&limits=:limits</h1>
+          <h1>GET /api/customer/:idInternalCustomer/risk-trails?limits=:limits</h1>
         </div>
 
         <div id="content-main">
@@ -59,7 +59,7 @@
                   <span class="param">idInternalCustomer
                     <span>required, type: string</span>
                   </span>
-                  <p>Declare in query string. The Internal Customer Number of the requested Customer.</p>
+                  <p>Declare in URL. The Internal Customer Number of the requested Customer.</p>
                 </div>
               
                 <div class="parameter">

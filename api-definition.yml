@@ -67,7 +67,7 @@ resources:
       token: eyJhbGciOiJIUzI1NiJ9...
   customer:
   - action: GET
-    uri: "/api/customer?idInternalCustomer=:idInternalCustomer"
+    uri: "/api/customer/:idInternalCustomer"
     description: Read a Customer by his Internal Customer Number
     headers:
       Content-Type: application/json
@@ -75,8 +75,8 @@ resources:
     params:
       idInternalCustomer:
         type: string
-        description: Declare in query string. The Internal Customer Number of
-          the requested Customer.
+        description: Declare in URL. The Internal Customer Number of the
+          requested Customer.
         required: true
     response:
       singles:
@@ -159,7 +159,7 @@ resources:
       idAuditTrail: 1
       idRiskTrail: 1
   - action: PUT
-    uri: "/api/customer?idInternalCustomer=:idInternalCustomer"
+    uri: "/api/customer/idInternalCustomer/:idInternalCustomer"
     description: Update an existing Customer. Responds with the unique
       identifiers of the created Risk and Audit Trails.
     headers:
@@ -168,8 +168,8 @@ resources:
     params:
       idInternalCustomer:
         type: string
-        description: Declare in query string. The Internal Customer Number of
-          the requested Customer.
+        description: Declare in URL. The Internal Customer Number of the
+          requested Customer.
         required: true
       main:
         type: object
@@ -197,18 +197,18 @@ resources:
       idAuditTrail: 2
       idRiskTrail: 2
   - action: DELETE
-    uri: "/api/customer?idInternalCustomer=:idInternalCustomer"
+    uri: "/api/customer/:idInternalCustomer"
     description: Delete a Customer from the system.
     params:
       idInternalCustomer:
         type: string
-        description: Declare in query string. The Internal Customer Number of
+        description: Declare in URL. The Internal Customer Number of
           the requested Customer.
         required: true
 
   Risk Analysis:
   - action: GET
-    uri: "/api/customer/risk?idInternalCustomer=:idInternalCustomer"
+    uri: "/api/customer/:idInternalCustomer/risk"
     description: Get a Risk Analysis, also known as Calculated Risk, for a given
       Customer.
     headers:
@@ -217,8 +217,8 @@ resources:
     params:
       idInternalCustomer:
         type: string
-        description: Declare in query string. The Internal Customer Number of
-          the requested Customer.
+        description: Declare in URL. The Internal Customer Number of the
+          requested Customer.
         required: true
     response:
       totals:
@@ -272,7 +272,7 @@ resources:
 
   Risk Trail:
   - action: GET
-    uri: "/api/customer/risk-trails?idInternalCustomer=:idInternalCustomer&limits=:limits"
+    uri: "/api/customer/:idInternalCustomer/risk-trails?limits=:limits"
     description: Read the Risk Trails for a given Customer. Note that the
       last Risk Trail also contains the current approval status for the
       Customer.
@@ -282,8 +282,8 @@ resources:
     params:
       idInternalCustomer:
         type: string
-        description: Declare in query string. The Internal Customer Number of
-          the requested Customer.
+        description: Declare in URL. The Internal Customer Number of the
+          requested Customer.
         required: true
       limits:
         type: integer
