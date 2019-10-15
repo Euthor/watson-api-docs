@@ -1,8 +1,9 @@
 # Table of Contents
 
-1. [HTTP Statuses](#http-statuses)
-2. [Authentication](#authentication)
-3. Entities
+1. [Overview](#overview)
+2. [HTTP Statuses](#http-statuses)
+3. [Authentication](#authentication)
+4. Entities
     - [Customer Main](#customer-main)
     - [Customer Lists](#customer-lists)
         - [ID Card](#id-card)
@@ -16,6 +17,26 @@
         - [Screening Risks](#screening-risks)
     - [Review](#review)
     - [Risk Trail](#risk-trail)
+
+## Overview
+
+The URL's posted for entities usually contain placeholders. Placeholders in URLs
+are denoted by square brackets, so when you see for example:
+
+```
+URL: /api/customer/[idInternalCustomerPerson]
+Method: GET
+```
+
+you are expected to replace `[idInternalCustomer]` with the Internal Customer
+Number of your Customer. An actual example would be:
+
+```
+URL: /api/customer/AC001
+Method: GET
+```
+
+will retrieve the Customer with Internal Customer Number `AC001`.
 
 ## HTTP Statuses<a name="http-statuses" />
 
