@@ -36,7 +36,7 @@ URL: /api/customer/AC001
 Method: GET
 ```
 
-will retrieve the Customer with Internal Customer Number `AC001`.
+... which will retrieve the Customer with Internal Customer Number `AC001`.
 
 ## HTTP Statuses<a name="http-statuses" />
 
