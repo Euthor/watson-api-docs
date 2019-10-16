@@ -963,14 +963,47 @@ Sample Request Body
 ]
 ```
 
+Sample Response
+
+```js
+{
+    "idAuditTrail": 43,
+    "idRiskTrail": 15
+}
+```
+
+
 ### Read Wealth
 
 URL: `/api/customer/[idInternalCustomer]/wealth`
 Method: `GET`
 
+Sample Response
+
+```js
+[
+    {
+        "idWealth": 1,
+        "idCustomer": 4,
+        "idWealthScale": 6,
+        "idWealthStatus": 1,
+        "source": "Oil Investments",
+        "id": 1
+    },
+    {
+        "idWealth": 2,
+        "idCustomer": 4,
+        "idWealthScale": 2,
+        "idWealthStatus": 2,
+        "source": "Inheritance",
+        "id": 2
+    }
+]
+```
+
 ### Update Wealth
 
-URL: `/api/customer/[idInternalCustomer]/wealth`
+URL: `/api/customer/[idInternalCustomer]/wealth/[idWealth]`
 Method: `PUT`
 
 Sample Request Body
@@ -981,10 +1014,29 @@ Sample Request Body
 }
 ```
 
+Sample Response
+
+```js
+{
+    "idAuditTrail": 46,
+    "idRiskTrail": 15
+}
+```
+
 ### Delete Wealth
 
-URL: `/api/customer/[idInternalCustomer]/wealth`
+URL: `/api/customer/[idInternalCustomer]/wealth/[idWealth]`
 Method: `DELETE`
+
+Sample Response
+
+```js
+{
+    "idAuditTrail": 47,
+    "idRiskTrail": 16
+}
+```
+
 ## Customer Annual Income<a name="annual-income"/>
 
 ### Create Annual Income
@@ -1004,14 +1056,46 @@ Sample Request Body
 ]
 ```
 
+Sample Response
+
+```js
+{
+    "idAuditTrail": 48,
+    "idRiskTrail": 16
+}
+```
+
 ### Read Annual Income
 
 URL: `/api/customer/[idInternalCustomer]/annual-income`
 Method: `GET`
 
+Sample Response
+
+```js
+[
+    {
+        "idAnnualIncome": 2,
+        "source": "Politician",
+        "idAnnualIncomeScale": 2,
+        "idAnnualIncomeStatus": 1,
+        "idCustomer": 4,
+        "id": 2
+    },
+    {
+        "idAnnualIncome": 6,
+        "source": "Oil Investments",
+        "idAnnualIncomeScale": 1,
+        "idAnnualIncomeStatus": 1,
+        "idCustomer": 4,
+        "id": 6
+    }
+]
+```
+
 ### Update Annual Income
 
-URL: `/api/customer/[idInternalCustomer]/annual-income`
+URL: `/api/customer/[idInternalCustomer]/annual-income/[idAnnualIncome]`
 Method: `PUT`
 
 Sample Request Body
@@ -1022,10 +1106,30 @@ Sample Request Body
 }
 ```
 
+Sample Response:
+
+```js
+{
+    "idAuditTrail": 49,
+    "idRiskTrail": 17
+}
+```
+
 ### Delete Annual Income
 
-URL: `/api/customer/[idInternalCustomer]/annual-income`
+URL: `/api/customer/[idInternalCustomer]/annual-income[idAnnualIncome]`
 Method: `DELETE`
+
+
+Sample Response:
+
+```js
+{
+    "idAuditTrail": 53,
+    "idRiskTrail": 17
+}
+```
+
 ## Customer Counterparty<a name="counterparty"/>
 
 ### Create Counterparty
