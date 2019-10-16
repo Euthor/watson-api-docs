@@ -1531,6 +1531,197 @@ Sample Response:
 URL: `/api/customer/[idInternalCustomerPerson]/risk`
 Method: `GET`
 
+
+Sample Response for Person:
+
+```js
+{
+    "totals": {
+        "screening": {
+            "name": "Screening Risks",
+            "contents": [
+                {
+                    "name": "Screening",
+                    "score": 300
+                }
+            ],
+            "score": 300
+        },
+        "kyc": {
+            "name": "KYC Risks",
+            "contents": [
+                {
+                    "name": "Non Face to Face",
+                    "score": 0
+                },
+                {
+                    "name": "ID Card",
+                    "score": 300
+                },
+                {
+                    "name": "Address",
+                    "score": 300
+                },
+                {
+                    "name": "Communication Means",
+                    "score": 20
+                },
+                {
+                    "name": "Missing Documents",
+                    "score": 0
+                }
+            ],
+            "score": 620
+        },
+        "economicProfile": {
+            "name": "Economic Profile Risks",
+            "contents": [
+                {
+                    "name": "Activity",
+                    "score": 0
+                },
+                {
+                    "name": "Wealth",
+                    "score": 0
+                }
+            ],
+            "score": 0
+        },
+        "countries": {
+            "name": "Country Risks",
+            "contents": [
+                {
+                    "name": "Countries",
+                    "score": 180
+                }
+            ],
+            "score": 180
+        },
+        "general": {
+            "name": "General Risks",
+            "contents": [
+                {
+                    "name": "Referred by third party",
+                    "score": 0
+                },
+                {
+                    "name": "Relationship Length",
+                    "score": 20
+                },
+                {
+                    "name": "Behavior",
+                    "score": 0
+                }
+            ],
+            "score": 20
+        }
+    },
+    "contaminators": [],
+    "global": {
+        "score": 1120
+    }
+}
+```
+
+Sample Response for Organisation:
+
+```js
+{
+    "totals": {
+        "screening": {
+            "name": "Screening Risks",
+            "contents": [
+                {
+                    "name": "Screening",
+                    "score": 0
+                }
+            ],
+            "score": 0
+        },
+        "kyc": {
+            "name": "KYC Risks",
+            "contents": [
+                {
+                    "name": "Entity Type",
+                    "score": 0
+                },
+                {
+                    "name": "Address",
+                    "score": 300
+                },
+                {
+                    "name": "Communication Means",
+                    "score": 20
+                },
+                {
+                    "name": "Missing Documents",
+                    "score": 40
+                }
+            ],
+            "score": 360
+        },
+        "economicProfile": {
+            "name": "Economic Profile Risks",
+            "contents": [
+                {
+                    "name": "Activity",
+                    "score": 0
+                },
+                {
+                    "name": "Wealth",
+                    "score": 0
+                },
+                {
+                    "name": "Financial Statements",
+                    "score": 100
+                }
+            ],
+            "score": 100
+        },
+        "countries": {
+            "name": "Country Risks",
+            "contents": [
+                {
+                    "name": "Countries",
+                    "score": 0
+                },
+                {
+                    "name": "Country Presence",
+                    "score": 270
+                },
+                {
+                    "name": "Counterparty",
+                    "score": 400
+                }
+            ],
+            "score": 670
+        },
+        "general": {
+            "name": "General Risks",
+            "contents": [
+                {
+                    "name": "Referred by third party",
+                    "score": 0
+                },
+                {
+                    "name": "Relationship Length",
+                    "score": 10
+                },
+                {
+                    "name": "Behavior",
+                    "score": 0
+                }
+            ],
+            "score": 10
+        }
+    },
+    "contaminators": [],
+    "global": {
+        "score": 1140
+    }
+}
+```
+
 ## Review<a name="review" />
 
 URL: `/api/customer/[idInternalCustomer]/reviews`
