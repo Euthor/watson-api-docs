@@ -1120,7 +1120,6 @@ Sample Response:
 URL: `/api/customer/[idInternalCustomer]/annual-income[idAnnualIncome]`
 Method: `DELETE`
 
-
 Sample Response:
 
 ```js
@@ -1146,8 +1145,23 @@ Sample Request Body
     "idCountry": 137,
     "idFundType": 1,
     "comments": "Lorem Ipsum"
+  },
+  {
+    "counterpartName": "John Doe",
+    "idCountry": 128,
+    "idFundType": 2,
+    "comments": "The comments"
   }
 ]
+```
+
+Sample Response:
+
+```js
+{
+    "idAuditTrail": 54,
+    "idRiskTrail": 18
+}
 ```
 
 ### Read Counterparty
@@ -1155,9 +1169,32 @@ Sample Request Body
 URL: `/api/customer/[idInternalCustomer]/counterparty`
 Method: `GET`
 
+Sample Response:
+
+```js
+[
+    {
+        "idFund": 1,
+        "idFundType": 1,
+        "idCountry": 137,
+        "comments": "Lorem Ipsum",
+        "counterpartName": "Mary Jane",
+        "id": 1
+    },
+    {
+        "idFund": 2,
+        "idFundType": 2,
+        "idCountry": 128,
+        "comments": "The comments",
+        "counterpartName": "John Doe",
+        "id": 2
+    }
+]
+```
+
 ### Update Counterparty
 
-URL: `/api/customer/[idInternalCustomer]/counterparty`
+URL: `/api/customer/[idInternalCustomer]/counterparty/[idFund]`
 Method: `PUT`
 
 Sample Request Body
@@ -1168,10 +1205,30 @@ Sample Request Body
 }
 ```
 
+Sample Response:
+
+```js
+{
+    "idAuditTrail": 55,
+    "idRiskTrail": 18
+}
+```
+
 ### Delete Counterparty
 
-URL: `/api/customer/[idInternalCustomer]/counterparty`
+URL: `/api/customer/[idInternalCustomer]/counterparty/[idFund]`
 Method: `DELETE`
+
+
+Sample Response:
+
+```js
+{
+    "idAuditTrail": 56,
+    "idRiskTrail": 18
+}
+```
+
 ## Customer Financial Statement<a name="financial-statement"/>
 
 ### Create Financial Statement
