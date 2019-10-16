@@ -1332,14 +1332,42 @@ Sample Request Body
 ]
 ```
 
+Sample Response:
+
+```js
+{
+    "idAuditTrail": 61,
+    "idRiskTrail": 19
+}
+```
+
 ### Read Country Presence
 
 URL: `/api/customer/[idInternalCustomer]/country-presence`
 Method: `GET`
 
+Sample Response:
+
+```js
+[
+    {
+        "idCountryPresence": 1,
+        "idCountry": 1,
+        "year": 2005,
+        "id": 1
+    },
+    {
+        "idCountryPresence": 3,
+        "idCountry": 90,
+        "year": 2009,
+        "id": 3
+    }
+]
+```
+
 ### Update Country Presence
 
-URL: `/api/customer/[idInternalCustomer]/country-presence`
+URL: `/api/customer/[idInternalCustomer]/country-presence/[idCountryPresence]`
 Method: `PUT`
 
 Sample Request Body
@@ -1350,10 +1378,29 @@ Sample Request Body
 }
 ```
 
+Sample Response:
+
+```js
+{
+    "idAuditTrail": 65,
+    "idRiskTrail": 19
+}
+```
+
 ### Delete Country Presence
 
-URL: `/api/customer/[idInternalCustomer]/country-presence`
+URL: `/api/customer/[idInternalCustomer]/country-presence/[idCountryPresence]`
 Method: `DELETE`
+
+Sample Response:
+
+```js
+{
+    "idAuditTrail": 66,
+    "idRiskTrail": 20
+}
+```
+
 ## Customer Screening Risks<a name="screening-risks"/>
 
 ### Create Screening Risks
