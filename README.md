@@ -763,6 +763,17 @@ Sample Request Body
 ]
 ```
 
+
+Sample Response
+
+```js
+{
+    "idAuditTrail": 35,
+    "idRiskTrail": 15
+}
+```
+
+
 ### Read Address
 
 URL: `/api/customer/[idInternalCustomer]/addresses`
