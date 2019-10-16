@@ -632,6 +632,8 @@ Sample Response for both Individual and Organisation:
 Method: `DELETE`
 URL: `/api/customer/[idInternalCustomerPerson]`
 
+The response has no body (empty)
+
 ## Customer Lists<a name="customer-lists" />
 
 Customer Lists can be passed an Array with 1 **or more** elements. For brevity
