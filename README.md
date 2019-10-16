@@ -618,6 +618,15 @@ Sample Request Body
 }
 ```
 
+Sample Response for both Individual and Organisation:
+```js
+{
+    "idAuditTrail": 21,
+    "idRiskTrail": 14
+}
+```
+
+
 ## Delete Customer
 
 Method: `DELETE`
