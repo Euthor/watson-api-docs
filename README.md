@@ -1414,7 +1414,7 @@ Sample Request Body
 [
   {
     "idScreeningRiskType": 1,
-    "full_name": "John Sierra Doe",
+    "full_name": "Donald Trump",
     "score": 97,
     "inspected": true,
     "confirmed": false,
@@ -1423,10 +1423,72 @@ Sample Request Body
 ]
 ```
 
+Sample Response:
+
+```js
+{
+    "idAuditTrail": 69,
+    "idRiskTrail": 21
+}
+```
+
 ### Read Screening Risks
 
 URL: `/api/customer/[idInternalCustomer]/screening-risks`
 Method: `GET`
+
+
+Sample Response:
+
+```js
+[
+    {
+        "idScreeningRisk": 3,
+        "idCustomer": 15,
+        "idScreeningRiskType": 2,
+        "identifier": "10101729617",
+        "score": 100,
+        "inspected": true,
+        "confirmed": false,
+        "type": "PEP List",
+        "full_name": "Donald John Jr. Trump",
+        "json": "{\"ID\":\"10101729617\",\"Relative_ID\":\"10101192552\",\"Title\":\"Mr.\",\"Gender\":\"Male\",\"First_Name\":\"Donald John Jr.\",\"Last_Name\":\"Trump\",\"Full_Name\":\"\",\"Other_Names\":\"Trump, Don\",\"Alternative_Script\":\"\",\"Function\":\"Relatives of High Officials, Son of Donald John Trump, CATEGORY: Close Relatives of PEPs\",\"Category\":\"Close Relatives of PEPs\",\"DOB\":\"31.12.1977\",\"POB\":\"Manhattan, New York, United States of America\",\"Country\":\"United States of America\",\"Code\":\"USA\",\"Additional_Information\":\"\",\"Country_Of_Origin\":\"\",\"Country_Of_Activity\":\"\"}",
+        "md5": "3dafa6c51cd6b6af7d1e1c66fcbc3002",
+        "manual_addition": false,
+        "id": 3
+    },
+    {
+        "idScreeningRisk": 4,
+        "idCustomer": 15,
+        "idScreeningRiskType": 2,
+        "identifier": "10101192552",
+        "score": 100,
+        "inspected": true,
+        "confirmed": true,
+        "type": "PEP List",
+        "full_name": "Donald John Trump",
+        "json": "{\"ID\":\"10101192552\",\"Relative_ID\":\"10101192552\",\"Title\":\"Mr.\",\"Gender\":\"Male\",\"First_Name\":\"Donald John\",\"Last_Name\":\"Trump\",\"Full_Name\":\"\",\"Other_Names\":\"\",\"Alternative_Script\":\"\",\"Function\":\"Executive Office of the President, White House Office, President of the United States of America, CATEGORY: Heads of State, Major Government Offices and Support; OTHER FUNCTION: Armed Forces, Commander-in-Chief, CATEGORY: Military; OTHER FUNCTION: Executive Office of the President, National Security Council, Chairperson, CATEGORY: Heads of State, Major Government Offices and Support\",\"Category\":\"Heads of State, Major Government Offices and Support; Military\",\"DOB\":\"14.06.1946\",\"POB\":\"Queens, New York City, New York, United States of America\",\"Country\":\"United States of America\",\"Code\":\"USA\",\"Additional_Information\":\"Net Worth: $2.9 B; Source: television, real estate\",\"Country_Of_Origin\":\"\",\"Country_Of_Activity\":\"\"}",
+        "md5": "9104e278e9b2458b2686e1841472f541",
+        "manual_addition": false,
+        "id": 4
+    },
+    {
+        "idScreeningRisk": 6,
+        "idCustomer": 15,
+        "idScreeningRiskType": 2,
+        "identifier": null,
+        "score": 100,
+        "inspected": true,
+        "confirmed": true,
+        "type": null,
+        "full_name": "Donald Trump",
+        "json": null,
+        "md5": null,
+        "manual_addition": true,
+        "id": 6
+    }
+]
+```
 
 ### Update Screening Risks
 
