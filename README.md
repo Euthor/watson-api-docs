@@ -1616,7 +1616,12 @@ Sample Response for Person:
             "score": 20
         }
     },
-    "contaminators": [],
+    "contaminators": [
+        {
+            "idCustomer": 2,
+            "newCalculatedRisk": 1140
+        }
+    ],
     "global": {
         "score": 1120
     }
@@ -1724,32 +1729,86 @@ Sample Response for Organisation:
 
 ## Review<a name="review" />
 
+### Read Reviews
+
 URL: `/api/customer/[idInternalCustomer]/reviews`
 Method: `GET`
 
+Sample Response:
+
+```js
+[
+    {
+        "id": 8,
+        "idReview": 8,
+        "createdDate": null,
+        "scheduledDate": "2020-01-17",
+        "reviewedDate": null,
+        "reviewed": false,
+        "comments": null,
+        "idCustomer": 15,
+        "idUserScheduler": null,
+        "idUserReviewer": null,
+        "userReviewerName": null
+    },
+    {
+        "id": 7,
+        "idReview": 7,
+        "createdDate": null,
+        "scheduledDate": "2020-01-17",
+        "reviewedDate": "2019-10-17",
+        "reviewed": true,
+        "comments": "",
+        "idCustomer": 15,
+        "idUserScheduler": null,
+        "idUserReviewer": 2,
+        "userReviewerName": "approver"
+    }
+]
+```
+
+### Read Last Review - PENDING
+### Review Last Review - PENDING
+
+
 ## Risk Trail<a name="risk-trail" />
 
-### Read Risk Trails
-
-URL: `/api/customer/[idInternalCustomer]/risk-trails`
-Method: `GET`
+### Read Risk Trails - PENDING
 
 ### Read Last Risk Trail
 
 URL: `/api/customer/[idInternalCustomer]/risk-trails?limits=1`
 Method: `GET`
 
+Sample Response:
+
+```js
+{
+    "id": 20,
+    "idRiskTrail": 20,
+    "reviewed": false,
+    "reviewedDate": null,
+    "comments": null,
+    "idCustomer": 2,
+    "idRiskType": null,
+    "idUserReviewer": null,
+    "userReviewerName": null,
+    "idApprovalStatus": null,
+    "approvalStatusName": null
+}
+```
+
 ### Update/Approve Risk Trail
 
 URL: `/api/customer/risk-trails/[idRiskTrail]`
-Method: `GET`
+Method: `PUT`
 
 Sample Request Body:
 
 ```js
 {
-  idApprovalStatus: 1,
-  idRiskType: 1,
-  comments: 'Lorem Ipsum'
+  "idApprovalStatus": 1,
+  "idRiskType": 1,
+  "comments": "Lorem Ipsum"
 }
 ```
