@@ -1,7 +1,7 @@
 ## Table of Contents
 
 1. [Overview](#overview)
-    - [Request Headers](#Request Headers)
+    - [Request Headers](#request-headers)
 2. [HTTP Statuses](#http-statuses)
 3. [Authentication](#authentication)
 4. Entities
@@ -22,7 +22,7 @@
 
 ## Overview
 
-## Request Headers
+### Request Headers<a name="request-headers" />
 
 All requests require 2 headers:
 
