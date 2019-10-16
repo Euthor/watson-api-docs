@@ -659,10 +659,38 @@ Sample Request Body
 ]
 ```
 
-### Read ID Card
+### Read ID Cards
 
 URL: `/api/customer/[idInternalCustomer]/id-card`
 Method: `GET`
+
+Sample Response:
+
+```js
+[
+    {
+        "idIdCard": 4,
+        "idIdCardType": 4,
+        "idCustomer": 5,
+        "number": "704473",
+        "filename": null,
+        "copy": false,
+        "expirationDate": "2018-04-07",
+        "id": 4
+    },
+    {
+        "idIdCard": 7,
+        "idIdCardType": 2,
+        "idCustomer": 5,
+        "number": "12345",
+        "filename": null,
+        "copy": true,
+        "expirationDate": "2020-01-01",
+        "id": 7
+    }
+]
+```
+
 
 ### Update ID Card
 
