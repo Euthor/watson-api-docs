@@ -72,6 +72,14 @@ username: 'administrator',
 password: 'test'
 ```
 
+Sample Response:
+```js
+{
+    "success": true,
+    "token": "eyJhbGciOiJIUz..."
+}
+```
+
 ## Customer Main<a name="customer-main" />
 
 ## Create Customer
