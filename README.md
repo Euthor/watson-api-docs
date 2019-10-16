@@ -2,6 +2,7 @@
 
 1. [Overview](#overview)
     - [Request Headers](#request-headers)
+    - [URL placeholders](#url-placeholders)
 2. [HTTP Statuses](#http-statuses)
 3. [Authentication](#authentication)
 4. Entities
@@ -31,7 +32,7 @@ All requests require 2 headers:
 "Content-Type": "application/json"
 ```
 
-### URL placeholders
+### URL placeholders<a name="url-placeholders" />
 
 The URL's posted for entities in this documentation usually contain
 placeholders. Placeholders in URLs are denoted by square brackets, so
