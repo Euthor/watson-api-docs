@@ -666,7 +666,7 @@ Sample Response
     "idAuditTrail": 30,
     "idRiskTrail": 13
 }
-
+```
 
 ### Read ID Card
 
