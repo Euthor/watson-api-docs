@@ -4,7 +4,7 @@
 2. [HTTP Statuses](#http-statuses)
 3. [Authentication](#authentication)
 4. Entities
-    - [Customer Main](#customer-main)
+    - [Customer](#customer)
     - [Customer Lists](#customer-lists)
         - [ID Card](#id-card)
         - [Address](#addresses)
@@ -15,6 +15,7 @@
         - [Financial Statement](#financial-statement)
         - [Country Presence](#country-presence)
         - [Screening Risks](#screening-risks)
+    - [Risk Analysis](#risk-analysis)
     - [Review](#review)
     - [Risk Trail](#risk-trail)
 
@@ -569,6 +570,11 @@ Sample Request Body
 
 URL: `/api/customer/[idInternalCustomer]/screening-risks`
 Method: `DELETE`
+
+## Risk Analysis<a name="risk-analysis" />
+
+URL: `/api/customer/[idInternalCustomerPerson]/risk`
+Method: `GET`
 
 ## Review<a name="review" />
 
