@@ -99,27 +99,29 @@ URL: `/api/customer`
 Sample Request Body
 
 ```js
-"details": {
-  "dateBirth": "1965-02-01",
-  "firstName": "John",
-  "maidenName": "Sierra",
-  "lastName": "Doe",
-  "idCountryBirth": 137,
-  "idCountryNationality": 137,
-  "idCountryResidence": 137,
-  "idGender": 3,
-  "idMaritalStatus": 1,
-  "nonFaceToFace": true,
-  "profession": "Accountant"
-},
-"main": {
-  "idCustomerStatus": 1,
-  "idCustomerType": 1,
-  "idInternalCustomer": "JD001",
-  "idUserResponsibleOfficer": 1,
-  "otherInfo": "Lorem Ipsum Comment",
-  "relationshipStartDate": "2001-01-19",
-  "relationshipEndDate": "2004-12-24"
+{
+  "details": {
+    "dateBirth": "1965-02-01",
+    "firstName": "John",
+    "maidenName": "Sierra",
+    "lastName": "Doe",
+    "idCountryBirth": 137,
+    "idCountryNationality": 137,
+    "idCountryResidence": 137,
+    "idGender": 3,
+    "idMaritalStatus": 1,
+    "nonFaceToFace": true,
+    "profession": "Accountant"
+  },
+  "main": {
+    "idCustomerStatus": 1,
+    "idCustomerType": 1,
+    "idInternalCustomer": "JD001",
+    "idUserResponsibleOfficer": 1,
+    "otherInfo": "Lorem Ipsum Comment",
+    "relationshipStartDate": "2001-01-19",
+    "relationshipEndDate": "2004-12-24"
+  }  
 }
 ```
 
@@ -128,26 +130,28 @@ Sample Request Body
 Sample Request Body
 
 ```js
-"details": {
-  "dateIncorporation": "2001-12-20",
-  "idCountryActivity": 137,
-  "idCountryDomiciliary": 137,
-  "idCountryIncorporation": 137,
-  "idIncorporationType": 1,
-  "mainBusinessActivity": "Trading",
-  "registeredName": "ACME Corporation LTD",
-  "registrationNo": "CY123",
-  "tradeName": null
-},
-"main": {
-  "idCustomerStatus": 1,
-  "idCustomerType": 2,
-  "idInternalCustomer": "AC001",
-  "idUserResponsibleOfficer": 1,
-  "otherInfo": null,
-  "referralAgent": null,
-  "relationshipStartDate": "2001-01-19",
-  "relationshipEndDate": null
+{
+  "details": {
+    "dateIncorporation": "2001-12-20",
+    "idCountryActivity": 137,
+    "idCountryDomiciliary": 137,
+    "idCountryIncorporation": 137,
+    "idIncorporationType": 1,
+    "mainBusinessActivity": "Trading",
+    "registeredName": "ACME Corporation LTD",
+    "registrationNo": "CY123",
+    "tradeName": null
+  },
+  "main": {
+    "idCustomerStatus": 1,
+    "idCustomerType": 2,
+    "idInternalCustomer": "AC001",
+    "idUserResponsibleOfficer": 1,
+    "otherInfo": null,
+    "referralAgent": null,
+    "relationshipStartDate": "2001-01-19",
+    "relationshipEndDate": null
+  }
 }
 ```
 
@@ -166,11 +170,13 @@ URL: `/api/customer/[idInternalCustomerPerson]`
 Sample Request Body
 
 ```js
-"details": {
-  "profession": "Programmer"
-},
-"main": {
-  "otherInfo": "Lorem Ipsum Comment 2"
+{
+  "details": {
+    "profession": "Programmer"
+  },
+  "main": {
+    "otherInfo": "Lorem Ipsum Comment 2"
+  }
 }
 ```
 
@@ -179,11 +185,13 @@ Sample Request Body
 Sample Request Body
 
 ```js
-"details": {
-  "registrationNo": "CY-456"
-},
-"main": {
-  "otherInfo": "Lorem Ipsum Comment 2"
+{
+  "details": {
+    "registrationNo": "CY-456"
+  },
+  "main": {
+    "otherInfo": "Lorem Ipsum Comment 2"
+  }
 }
 ```
 
@@ -193,6 +201,9 @@ Method: `DELETE`
 URL: `/api/customer/[idInternalCustomerPerson]`
 
 ## Customer Lists<a name="customer-lists" />
+
+Customer Lists can be passed an Array with 1 **or more** elements. For brevity
+only 1 element is passed in the sample request bodies for the following lists.
 
 ## Customer ID Card<a name="id-card"/>
 
