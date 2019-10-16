@@ -177,6 +177,410 @@ Sample Response for both Individual and Organisation:
 Method: `GET`
 URL: `/api/customer/[idInternalCustomerPerson]`
 
+Sample Response:
+
+`{
+    "singles": {
+        "main": {
+            "idCustomer": 3,
+            "idUserLastModified": 2,
+            "idInternalCustomer": "200",
+            "relationshipStartDate": "2017-02-01",
+            "relationshipEndDate": null,
+            "referralAgent": null,
+            "otherInfo": null,
+            "idCustomerStatus": 1,
+            "idCustomerType": 1,
+            "idUserResponsibleOfficer": 2,
+            "idUser": 5,
+            "printName": "200"
+        },
+        "details": {
+            "idCustomer": 3,
+            "firstName": "Adamos",
+            "maidenName": null,
+            "lastName": "Adamou",
+            "dateBirth": "2040-11-12",
+            "nonFaceToFace": false,
+            "idCountryNationality": 137,
+            "idCountryBirth": 137,
+            "idCountryResidence": 137,
+            "idGender": 1,
+            "idMaritalStatus": 6,
+            "profession": null
+        }
+    },
+    "lists": {
+        "addresses": {
+            "contents": [
+                {
+                    "idAddress": 1,
+                    "idCustomer": 3,
+                    "idCountry": 137,
+                    "streetName": "Makariou",
+                    "postcode": "4787",
+                    "city": "Nicosia",
+                    "filename": " ",
+                    "verified": false,
+                    "id": 1
+                }
+            ],
+            "deletedRows": [],
+            "id": "idAddress"
+        },
+        "screeningRisks": {
+            "contents": [],
+            "deletedRows": [],
+            "id": "idScreeningRisk"
+        },
+        "communicationMeans": {
+            "contents": [
+                {
+                    "idCommunicationMeans": 136,
+                    "idCommunicationMeansType": 1,
+                    "value": "99999999",
+                    "idCustomer": 3,
+                    "id": 1
+                },
+                {
+                    "idCommunicationMeans": 7,
+                    "idCommunicationMeansType": 4,
+                    "value": "test.email@email.com",
+                    "idCustomer": 3,
+                    "id": 7
+                }
+            ],
+            "deletedRows": [],
+            "id": "idCommunicationMeans"
+        },
+        "annualIncomeEntries": {
+            "contents": [
+                {
+                    "idAnnualIncome": 1,
+                    "source": "Salesperson",
+                    "idAnnualIncomeScale": 2,
+                    "idAnnualIncomeStatus": 1,
+                    "idCustomer": 3,
+                    "id": 1
+                }
+            ],
+            "deletedRows": [],
+            "id": "idAnnualIncome"
+        },
+        "stakesOut": {
+            "contents": [],
+            "deletedRows": [],
+            "id": "idStake"
+        },
+        "rolesOut": {
+            "contents": [],
+            "deletedRows": [],
+            "id": "idCustomerAssociation"
+        },
+        "wealthEntries": {
+            "contents": [],
+            "deletedRows": [],
+            "id": "idWealth"
+        },
+        "documents": {
+            "contents": [],
+            "deletedRows": [],
+            "id": "idDocument"
+        },
+        "idCards": {
+            "contents": [
+                {
+                    "idIdCard": 2,
+                    "idIdCardType": 4,
+                    "idCustomer": 3,
+                    "number": "624323",
+                    "filename": null,
+                    "copy": true,
+                    "expirationDate": "2020-11-25",
+                    "id": 2
+                }
+            ],
+            "deletedRows": [],
+            "id": "idIdCard"
+        },
+        "events": {
+            "contents": [],
+            "deletedRows": [],
+            "id": "idEvent"
+        }
+    },
+    "checkedLists": {
+        "checkedDocuments": {
+            "contents": [ 
+					1,
+					5
+				],
+            "added": [],
+            "removed": [],
+            "listId": "npkxth",
+            "types": [
+                {
+                    "id": 1,
+                    "name": "Reference letter"
+                },
+                {
+                    "id": 2,
+                    "name": "Due Diligence QUESTIONAIRE"
+                },
+                {
+                    "id": 3,
+                    "name": "Signature"
+                },
+                {
+                    "id": 4,
+                    "name": "World Compliance Questionnaire"
+                },
+                {
+                    "id": 5,
+                    "name": "Tax Declaration"
+                },
+                {
+                    "id": 6,
+                    "name": "Memorandum and Articles of Association"
+                },
+                {
+                    "id": 7,
+                    "name": "Group/ Organization Chart"
+                },
+                {
+                    "id": 8,
+                    "name": "Certificate of directors"
+                },
+                {
+                    "id": 9,
+                    "name": "Certificate of shareholders"
+                },
+                {
+                    "id": 10,
+                    "name": "Certificate of registered office"
+                },
+                {
+                    "id": 11,
+                    "name": "Certificate of good standing"
+                },
+                {
+                    "id": 12,
+                    "name": "Trust deed"
+                },
+                {
+                    "id": 13,
+                    "name": "Board resolution"
+                },
+                {
+                    "id": 14,
+                    "name": "Engagement letter"
+                },
+                {
+                    "id": 15,
+                    "name": "Company relationship form"
+                }
+            ]
+        },
+        "checkedActivityRisks": {
+            "contents": [],
+            "added": [],
+            "removed": [],
+            "listId": "kenpiu",
+            "types": [
+                {
+                    "id": 1,
+                    "name": "Art Dealer"
+                },
+                {
+                    "id": 2,
+                    "name": "High Value transactions"
+                },
+                {
+                    "id": 3,
+                    "name": "Precious stones"
+                },
+                {
+                    "id": 4,
+                    "name": "High Risk trading / Casino gaming"
+                },
+                {
+                    "id": 5,
+                    "name": "Internet based business"
+                },
+                {
+                    "id": 6,
+                    "name": "Cash based business"
+                },
+                {
+                    "id": 7,
+                    "name": "Electronic Money Institution"
+                },
+                {
+                    "id": 8,
+                    "name": "Business generating high volumes of cash"
+                },
+                {
+                    "id": 9,
+                    "name": "Money Service Business"
+                },
+                {
+                    "id": 10,
+                    "name": "Art Dealer"
+                },
+                {
+                    "id": 11,
+                    "name": "Precious stones"
+                },
+                {
+                    "id": 12,
+                    "name": "High risk trading / Casino gaming"
+                },
+                {
+                    "id": 13,
+                    "name": "Internet based business"
+                },
+                {
+                    "id": 14,
+                    "name": "Cash based business"
+                },
+                {
+                    "id": 15,
+                    "name": "Electronic Money Institution"
+                },
+                {
+                    "id": 16,
+                    "name": "High Value transactions"
+                },
+                {
+                    "id": 17,
+                    "name": "Money Service Business"
+                },
+                {
+                    "id": 18,
+                    "name": "Business generating high volumes of cash"
+                },
+                {
+                    "id": 19,
+                    "name": "Bearer Shares"
+                }
+            ]
+        },
+        "checkedBehaviorRisks": {
+            "contents": [
+				3,
+				5
+			],
+            "added": [],
+            "removed": [],
+            "listId": "sdvfkd",
+            "types": [
+                {
+                    "id": 1,
+                    "name": "Frequent changes of address"
+                },
+                {
+                    "id": 2,
+                    "name": "Avoidance of authorities"
+                },
+                {
+                    "id": 3,
+                    "name": "Difficult to reach"
+                },
+                {
+                    "id": 4,
+                    "name": "Criminal proceedings"
+                },
+                {
+                    "id": 5,
+                    "name": "Unwillingness to provide (KYC) documentation/information requested"
+                },
+                {
+                    "id": 6,
+                    "name": "Unwillingness to provide details on source of funds"
+                },
+                {
+                    "id": 7,
+                    "name": "Provides unusual suspicious ID docs that cannot be easily verified"
+                },
+                {
+                    "id": 8,
+                    "name": "Client acting nervous"
+                },
+                {
+                    "id": 9,
+                    "name": "Client in depth knowledge of AML requirements"
+                },
+                {
+                    "id": 10,
+                    "name": "Frequent changes of address"
+                },
+                {
+                    "id": 11,
+                    "name": "Reluctant to provide information"
+                },
+                {
+                    "id": 12,
+                    "name": "Not clear business activity"
+                },
+                {
+                    "id": 13,
+                    "name": "Difficult to reach"
+                },
+                {
+                    "id": 14,
+                    "name": "Avoidance of authorities"
+                }
+            ]
+        },
+        "checkedEnhancedChecks": {
+            "contents": [
+                3
+            ],
+            "added": [],
+            "removed": [],
+            "listId": "pehsld",
+            "types": [
+                {
+                    "id": 1,
+                    "name": "Second Identification Document"
+                },
+                {
+                    "id": 2,
+                    "name": "Registered Mail with required response"
+                },
+                {
+                    "id": 3,
+                    "name": "Called customer at home phone number"
+                },
+                {
+                    "id": 4,
+                    "name": "Home visit"
+                },
+                {
+                    "id": 5,
+                    "name": "Visited their offices"
+                },
+                {
+                    "id": 6,
+                    "name": "Lawyer Certification"
+                },
+                {
+                    "id": 7,
+                    "name": "Received Apostilled documents"
+                },
+                {
+                    "id": 8,
+                    "name": "Called at their offices"
+                },
+                {
+                    "id": 9,
+                    "name": "Visited their website"
+                }
+            ]
+        }
+    }
+}`
+
 ## Update Customer
 
 Method: `PUT`
