@@ -1,7 +1,7 @@
 ## Table of Contents
 
 1. [Overview](#overview)
-    - [Request Headers] (#requestHeaders)
+    - [Request Headers] (#Request Headers)
     - [ID Card](#id-card)
 2. [HTTP Statuses](#http-statuses)
 3. [Authentication](#authentication)
@@ -23,7 +23,7 @@
 
 ## Overview
 
-### Request Headers<a name="requestHeaders" />
+### Request Headers
 
 All requests require 2 headers:
 
