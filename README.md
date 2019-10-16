@@ -865,14 +865,51 @@ Sample Request Body
 ]
 ```
 
+Sample Response
+
+```js
+{
+    "idAuditTrail": 40,
+    "idRiskTrail": 15
+}
+```
+
 ### Read Communication Means
 
 URL: `/api/customer/[idInternalCustomer]/communication-means`
 Method: `GET`
 
+Sample Response
+
+```js
+[
+    {
+        "idCommunicationMeans": 8,
+        "idCommunicationMeansType": 1,
+        "value": "99999999",
+        "idCustomer": 4,
+        "id": 8
+    },
+    {
+        "idCommunicationMeans": 10,
+        "idCommunicationMeansType": 3,
+        "value": "98561898",
+        "idCustomer": 4,
+        "id": 10
+    },
+    {
+        "idCommunicationMeans": 36,
+        "idCommunicationMeansType": 4,
+        "value": "john@doe.com",
+        "idCustomer": 4,
+        "id": 36
+    }
+]
+```
+
 ### Update Communication Means
 
-URL: `/api/customer/[idInternalCustomer]/communication-means`
+URL: `/api/customer/[idInternalCustomer]/communication-means/[idCommunicationMeans]`
 Method: `PUT`
 
 Sample Request Body
@@ -883,10 +920,30 @@ Sample Request Body
 }
 ```
 
+Sample Response
+
+```js
+{
+    "idAuditTrail": 41,
+    "idRiskTrail": 15
+}
+```
+
 ### Delete Communication Means
 
-URL: `/api/customer/[idInternalCustomer]/communication-means`
+URL: `/api/customer/[idInternalCustomer]/communication-means/[idCommunicationMeans]`
 Method: `DELETE`
+
+Sample Response
+
+```js
+{
+    "idAuditTrail": 42,
+    "idRiskTrail": 15
+}
+```
+
+
 ## Customer Wealth<a name="wealth"/>
 
 ### Create Wealth
