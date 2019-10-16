@@ -2,7 +2,6 @@
 
 1. [Overview](#overview)
     - [Request Headers](#Request Headers)
-    - [ID Card](#id-card)
 2. [HTTP Statuses](#http-statuses)
 3. [Authentication](#authentication)
 4. Entities
@@ -23,7 +22,7 @@
 
 ## Overview
 
-### Request Headers
+## Request Headers
 
 All requests require 2 headers:
 
