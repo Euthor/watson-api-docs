@@ -659,6 +659,16 @@ Sample Request Body
 ]
 ```
 
+Sample Response
+
+```js
+{
+    "idAuditTrail": 30,
+    "idRiskTrail": 13
+}
+```
+
+
 ### Read ID Card
 
 URL: `/api/customer/[idInternalCustomer]/id-card`
