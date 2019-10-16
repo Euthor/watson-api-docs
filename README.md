@@ -1812,3 +1812,13 @@ Sample Request Body:
   "comments": "Lorem Ipsum"
 }
 ```
+
+Sample Response:
+
+```js
+[
+    {
+        "idReview": 6
+    }
+]
+```
