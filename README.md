@@ -666,7 +666,6 @@ Sample Response
     "idAuditTrail": 30,
     "idRiskTrail": 13
 }
-```
 
 
 ### Read ID Card
@@ -704,7 +703,7 @@ Sample Response:
 
 ### Update ID Card
 
-URL: `/api/customer/[idInternalCustomer]/id-card`
+URL: `/api/customer/[idInternalCustomer]/id-card/[idIdCard]`
 Method: `PUT`
 
 Sample Request Body
@@ -716,10 +715,31 @@ Sample Request Body
 }
 ```
 
+Sample Response
+
+```js
+
+{
+    "idAuditTrail": 32,
+    "idRiskTrail": 13
+}
+```
+
 ### Delete ID Card
 
-URL: `/api/customer/[idInternalCustomer]/id-card`
+URL: `/api/customer/[idInternalCustomer]/id-card/[idIdCard]`
 Method: `DELETE`
+
+Sample Response
+
+```js
+
+{
+    "idAuditTrail": 55,
+    "idRiskTrail": 26
+}
+```
+
 ## Customer Address<a name="addresses"/>
 
 ### Create Address
