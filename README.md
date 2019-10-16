@@ -1475,11 +1475,11 @@ Sample Response:
     {
         "idScreeningRisk": 6,
         "idCustomer": 15,
-        "idScreeningRiskType": 2,
+        "idScreeningRiskType": 1,
         "identifier": null,
         "score": 100,
         "inspected": true,
-        "confirmed": true,
+        "confirmed": false,
         "type": null,
         "full_name": "Donald Trump",
         "json": null,
@@ -1492,7 +1492,7 @@ Sample Response:
 
 ### Update Screening Risks
 
-URL: `/api/customer/[idInternalCustomer]/screening-risks`
+URL: `/api/customer/[idInternalCustomer]/screening-risks/[idScreeningRisk]`
 Method: `PUT`
 
 Sample Request Body
@@ -1503,10 +1503,28 @@ Sample Request Body
 }
 ```
 
+Sample Response:
+
+```js
+{
+    "idAuditTrail": 71,
+    "idRiskTrail": 21
+}
+```
+
 ### Delete Screening Risks
 
-URL: `/api/customer/[idInternalCustomer]/screening-risks`
+URL: `/api/customer/[idInternalCustomer]/screening-risks/[idScreeningRisk]`
 Method: `DELETE`
+
+Sample Response:
+
+```js
+{
+    "idAuditTrail": 72,
+    "idRiskTrail": 21
+}
+```
 
 ## Risk Analysis<a name="risk-analysis" />
 
