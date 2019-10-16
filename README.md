@@ -81,8 +81,10 @@ URL: `/api/login`
 Sample Request Body:
 
 ```js
-username: 'administrator',
-password: 'test'
+{
+  "username": "administrator",
+  "password": "test"
+}
 ```
 
 ## Customer<a name="customer" />
