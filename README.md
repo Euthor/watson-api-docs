@@ -134,6 +134,13 @@ Sample Request Body
 }
 ```
 
+Sample Response:
+```js
+{
+    "idAuditTrail": 17,
+    "idRiskTrail": 12
+}
+```
 ### Customer Organisation
 
 Sample Request Body
