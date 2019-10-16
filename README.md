@@ -87,6 +87,15 @@ Sample Request Body:
 }
 ```
 
+Sample Response:
+
+```js
+{
+    "success": true,
+    "token": "eyJhbGciOiJIUzI1N..."
+}
+```
+
 ## Customer<a name="customer" />
 
 ## Create Customer
