@@ -20,8 +20,20 @@
 
 ## Overview
 
-The URL's posted for entities usually contain placeholders. Placeholders in URLs
-are denoted by square brackets, so when you see for example:
+### Request Headers
+
+All requests require 2 headers:
+
+```js
+"x-access-token": "replace-this-with-your-access-token"
+"Content-Type": "application/json"
+```
+
+### URL placeholders
+
+The URL's posted for entities in this documentation usually contain
+placeholders. Placeholders in URLs are denoted by square brackets, so
+when you see for example:
 
 ```
 URL: /api/customer/[idInternalCustomerPerson]
@@ -36,7 +48,7 @@ URL: /api/customer/AC001
 Method: GET
 ```
 
-... which will retrieve the Customer with Internal Customer Number `AC001`.
+...which will retrieve the Customer with Internal Customer Number `AC001`.
 
 ## HTTP Statuses<a name="http-statuses" />
 
@@ -72,7 +84,7 @@ username: 'administrator',
 password: 'test'
 ```
 
-## Customer Main<a name="customer-main" />
+## Customer<a name="customer" />
 
 ## Create Customer
 
@@ -84,27 +96,27 @@ URL: `/api/customer`
 Sample Request Body
 
 ```js
-details: {
-  dateBirth: '1965-02-01',
-  firstName: 'John',
-  maidenName: 'Sierra',
-  lastName: 'Doe',
-  idCountryBirth: 137,
-  idCountryNationality: 137,
-  idCountryResidence: 137,
-  idGender: 3,
-  idMaritalStatus: 1,
-  nonFaceToFace: true,
-  profession: 'Accountant'
+"details": {
+  "dateBirth": "1965-02-01",
+  "firstName": "John",
+  "maidenName": "Sierra",
+  "lastName": "Doe",
+  "idCountryBirth": 137,
+  "idCountryNationality": 137,
+  "idCountryResidence": 137,
+  "idGender": 3,
+  "idMaritalStatus": 1,
+  "nonFaceToFace": true,
+  "profession": "Accountant"
 },
-main: {
-  idCustomerStatus: 1,
-  idCustomerType: 1,
-  idInternalCustomer: idInternalCustomerPerson,
-  idUserResponsibleOfficer: 1,
-  otherInfo: 'Lorem Ipsum Comment',
-  relationshipStartDate: '2001-01-19',
-  relationshipEndDate: '2004-12-24'
+"main": {
+  "idCustomerStatus": 1,
+  "idCustomerType": 1,
+  "idInternalCustomer": "JD001",
+  "idUserResponsibleOfficer": 1,
+  "otherInfo": "Lorem Ipsum Comment",
+  "relationshipStartDate": "2001-01-19",
+  "relationshipEndDate": "2004-12-24"
 }
 ```
 
@@ -113,26 +125,26 @@ main: {
 Sample Request Body
 
 ```js
-details: {
-  dateIncorporation: '2001-12-20',
-  idCountryActivity: 137,
-  idCountryDomiciliary: 137,
-  idCountryIncorporation: 137,
-  idIncorporationType: 1,
-  mainBusinessActivity: 'Trading',
-  registeredName: 'ACME Corporation LTD',
-  registrationNo: 'CY123',
-  tradeName: null
+"details": {
+  "dateIncorporation": "2001-12-20",
+  "idCountryActivity": 137,
+  "idCountryDomiciliary": 137,
+  "idCountryIncorporation": 137,
+  "idIncorporationType": 1,
+  "mainBusinessActivity": "Trading",
+  "registeredName": "ACME Corporation LTD",
+  "registrationNo": "CY123",
+  "tradeName": null
 },
-main: {
-  idCustomerStatus: 1,
-  idCustomerType: 2,
-  idInternalCustomer: idInternalCustomerOrg,
-  idUserResponsibleOfficer: 1,
-  otherInfo: null,
-  referralAgent: null,
-  relationshipStartDate: '2001-01-19',
-  relationshipEndDate: null
+"main": {
+  "idCustomerStatus": 1,
+  "idCustomerType": 2,
+  "idInternalCustomer": "AC001",
+  "idUserResponsibleOfficer": 1,
+  "otherInfo": null,
+  "referralAgent": null,
+  "relationshipStartDate": "2001-01-19",
+  "relationshipEndDate": null
 }
 ```
 
@@ -151,11 +163,11 @@ URL: `/api/customer/[idInternalCustomerPerson]`
 Sample Request Body
 
 ```js
-details: {
-  profession: 'Programmer'
+"details": {
+  "profession": "Programmer"
 },
-main: {
-  otherInfo: 'Lorem Ipsum Comment 2'
+"main": {
+  "otherInfo": "Lorem Ipsum Comment 2"
 }
 ```
 
@@ -164,11 +176,11 @@ main: {
 Sample Request Body
 
 ```js
-details: {
-  registrationNo: 'CY-456'
+"details": {
+  "registrationNo": "CY-456"
 },
-main: {
-  otherInfo: 'Lorem Ipsum Comment 2'
+"main": {
+  "otherInfo": "Lorem Ipsum Comment 2"
 }
 ```
 
