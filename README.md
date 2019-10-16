@@ -768,6 +768,36 @@ Sample Request Body
 URL: `/api/customer/[idInternalCustomer]/addresses`
 Method: `GET`
 
+
+Sample Response
+
+```js
+[
+    {
+        "idAddress": 2,
+        "idCustomer": 4,
+        "idCountry": 137,
+        "streetName": "Digeni Akrita",
+        "postcode": "4498",
+        "city": "Limassol",
+        "filename": " ",
+        "verified": false,
+        "id": 2
+    },
+    {
+        "idAddress": 6,
+        "idCustomer": 4,
+        "idCountry": 137,
+        "streetName": "Mpizaniou",
+        "postcode": "4493",
+        "city": "Limassol",
+        "filename": null,
+        "verified": true,
+        "id": 6
+    }
+]
+```
+
 ### Update Address
 
 URL: `/api/customer/[idInternalCustomer]/addresses`
