@@ -659,7 +659,7 @@ Sample Request Body
 ]
 ```
 
-### Read ID Cards
+### Read ID Card
 
 URL: `/api/customer/[idInternalCustomer]/id-card`
 Method: `GET`
