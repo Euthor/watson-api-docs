@@ -134,13 +134,6 @@ Sample Request Body
 }
 ```
 
-Sample Response:
-```js
-{
-    "idAuditTrail": 17,
-    "idRiskTrail": 12
-}
-```
 ### Customer Organisation
 
 Sample Request Body
@@ -168,6 +161,14 @@ Sample Request Body
     "relationshipStartDate": "2001-01-19",
     "relationshipEndDate": null
   }
+}
+```
+
+Sample Response for both Individual and Organisation:
+```js
+{
+    "idAuditTrail": 17,
+    "idRiskTrail": 12
 }
 ```
 
