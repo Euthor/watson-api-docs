@@ -1219,7 +1219,6 @@ Sample Response:
 URL: `/api/customer/[idInternalCustomer]/counterparty/[idFund]`
 Method: `DELETE`
 
-
 Sample Response:
 
 ```js
@@ -1249,14 +1248,39 @@ Sample Request Body
 ]
 ```
 
+Sample Response:
+
+```js
+{
+    "idAuditTrail": 56,
+    "idRiskTrail": 18
+}
+```
+
 ### Read Financial Statement
 
 URL: `/api/customer/[idInternalCustomer]/financial-statement`
 Method: `GET`
 
+Sample Response:
+
+```js
+[
+    {
+        "idStatement": 1,
+        "idStatementType": 1,
+        "year": 2005,
+        "income": 500000,
+        "expenses": null,
+        "copy": true,
+        "id": 1
+    }
+]
+```
+
 ### Update Financial Statement
 
-URL: `/api/customer/[idInternalCustomer]/financial-statement`
+URL: `/api/customer/[idInternalCustomer]/financial-statement/[idStatement]`
 Method: `PUT`
 
 Sample Request Body
@@ -1267,10 +1291,29 @@ Sample Request Body
 }
 ```
 
+Sample Response:
+
+```js
+{
+    "idAuditTrail": 58,
+    "idRiskTrail": 18
+}
+```
+
 ### Delete Financial Statement
 
-URL: `/api/customer/[idInternalCustomer]/financial-statement`
+URL: `/api/customer/[idInternalCustomer]/financial-statement/[idStatement]`
 Method: `DELETE`
+
+Sample Response:
+
+```js
+{
+    "idAuditTrail": 60,
+    "idRiskTrail": 19
+}
+```
+
 ## Customer Country Presence<a name="country-presence"/>
 
 ### Create Country Presence
