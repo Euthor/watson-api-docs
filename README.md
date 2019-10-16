@@ -811,7 +811,7 @@ Sample Response
 
 ### Update Address
 
-URL: `/api/customer/[idInternalCustomer]/addresses`
+URL: `/api/customer/[idInternalCustomer]/addresses/[idAddress]`
 Method: `PUT`
 
 Sample Request Body
@@ -819,15 +819,34 @@ Sample Request Body
 ```js
 {
   "streetName": "55 Fykardou Street",
-  "city": "Nicosia",
-  "postcode": "2010"
+  "postcode": "2010",
+  "verified": false
+}
+```
+
+Sample Response:
+
+```js
+{
+    "idAuditTrail": 37,
+    "idRiskTrail": 15
 }
 ```
 
 ### Delete Address
 
-URL: `/api/customer/[idInternalCustomer]/addresses`
+URL: `/api/customer/[idInternalCustomer]/addresses/[idAddress]`
 Method: `DELETE`
+
+Sample Response:
+
+```js
+{
+    "idAuditTrail": 39,
+    "idRiskTrail": 15
+}
+```
+
 ## Customer Communication Means<a name="communication-means"/>
 
 ### Create Communication Means
