@@ -179,7 +179,8 @@ URL: `/api/customer/[idInternalCustomerPerson]`
 
 Sample Response:
 
-`{
+```js
+{
     "singles": {
         "main": {
             "idCustomer": 3,
@@ -197,10 +198,10 @@ Sample Response:
         },
         "details": {
             "idCustomer": 3,
-            "firstName": "Adamos",
+            "firstName": "John",
             "maidenName": null,
-            "lastName": "Adamou",
-            "dateBirth": "2040-11-12",
+            "lastName": "Doe",
+            "dateBirth": "1940-11-12",
             "nonFaceToFace": false,
             "idCountryNationality": 137,
             "idCountryBirth": 137,
@@ -579,7 +580,8 @@ Sample Response:
             ]
         }
     }
-}`
+}
+```
 
 ## Update Customer
 
